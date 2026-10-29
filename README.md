@@ -175,9 +175,3 @@ npm run dev
 5. Environment variables: `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY`.
 6. Verification: `netlify.toml` automatically handles SPA nested routing (`/* /index.html 200`).
 
----
-
-## 8. License
-
-MIT License. Designed and engineered for scalable, reproducible enterprise workforce operations.
-
