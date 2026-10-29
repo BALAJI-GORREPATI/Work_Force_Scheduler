@@ -1,4 +1,4 @@
-# WorkForce Scheduler 2.0 — Workforce Scheduling, Constraint Validation & Decision Traceability
+# WorkForce Scheduler — Workforce Scheduling, Constraint Validation & Decision Traceability
 
 [![Production Build](https://img.shields.io/badge/Production%20Build-Passing-emerald.svg)](https://github.com)
 [![Benchmark F1](https://img.shields.io/badge/Benchmark%20F1-1.0000-blue.svg)](https://github.com)
@@ -158,7 +158,7 @@ npm run dev
 ## 6. Supabase Configuration (Authentication & PostgreSQL)
 
 1. Create a new project in [Supabase](https://supabase.com).
-2. Open the **SQL Editor** in the Supabase Dashboard.
+2. Open the SQL Editor in the Supabase Dashboard.
 3. Run `supabase/migrations/001_initial_schema.sql` to instantiate all 10 core entities and audit tables.
 4. Run `supabase/migrations/002_rls_policies.sql` to configure Row Level Security (RLS) policies.
 5. Seed initial records via `supabase/seed.sql` or bulk import via `scripts/generate_and_seed.py`.
@@ -177,21 +177,7 @@ npm run dev
 
 ---
 
-## 8. Role-Based Access Control (RBAC) Personas
-
-The application features a demo persona switcher to test real role-based permission boundaries:
-
-| Persona Name | Role | Primary Team | Key Permitted Workflows |
-| :--- | :--- | :--- | :--- |
-| **Alex Smith** | `EMPLOYEE` | Backend Alpha | Views personal schedule, submits leave requests, requests peer shift swaps |
-| **Jordan Johnson** | `MANAGER` | Backend Core | Approves/rejects squad leave, reviews swaps, enacts authorized trades |
-| **Sarah Connor** | `HR_PARTNER` | Platform Talent | Audits working-hour limits, overtime caps, attendance reconciliation |
-| **Marcus Vance** | `IT_OPS_PARTNER`| Cloud SRE | Configures shift demand, IT skill requirements, runs optimization solver |
-| **Devon Lee** | `ADMIN` | Core Platform | Full system oversight, benchmark evaluation, audit logs, data exports |
-
----
-
-## 9. License
+## 8. License
 
 MIT License. Designed and engineered for scalable, reproducible enterprise workforce operations.
 
