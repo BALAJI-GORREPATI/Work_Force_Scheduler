@@ -1,0 +1,61 @@
+skill_id,skill_name,category,description,created_at
+SKILL-001,Python,Software Engineering,"Advanced Python programming, asynchronous execution, and backend architecture",2025-12-01T00:00:00Z
+SKILL-002,Java,Software Engineering,"Enterprise Java, Spring Boot, JVM performance tuning",2025-12-01T00:00:00Z
+SKILL-003,JavaScript,Software Engineering,"Modern ECMAScript, event-driven web programming, Node.js",2025-12-01T00:00:00Z
+SKILL-004,TypeScript,Software Engineering,"Static typing, advanced interfaces, large-scale application design",2025-12-01T00:00:00Z
+SKILL-005,Go,Software Engineering,"Golang systems programming, concurrency, microservices",2025-12-01T00:00:00Z
+SKILL-006,C#,Software Engineering,".NET Core ecosystem, ASP.NET Web API, enterprise services",2025-12-01T00:00:00Z
+SKILL-007,C++,Software Engineering,"High-performance systems programming, memory safety, algorithms",2025-12-01T00:00:00Z
+SKILL-008,Rust,Software Engineering,"Memory-safe systems programming, concurrency, low-level tooling",2025-12-01T00:00:00Z
+SKILL-009,Backend Development,Software Engineering,"Server-side business logic, transaction handling, caching layers",2025-12-01T00:00:00Z
+SKILL-010,Frontend Development,Software Engineering,"React, modern UI frameworks, responsive design, state management",2025-12-01T00:00:00Z
+SKILL-011,REST APIs,Software Engineering,"OpenAPI/Swagger, RESTful API design, HTTP status patterns",2025-12-01T00:00:00Z
+SKILL-012,Microservices,Software Engineering,"Service mesh, domain-driven design, gRPC, distributed workflows",2025-12-01T00:00:00Z
+SKILL-013,Pandas,Data Engineering & Analytics,"Tabular data manipulation, aggregation, feature engineering in Python",2025-12-01T00:00:00Z
+SKILL-014,NumPy,Data Engineering & Analytics,"Multidimensional array computation, numerical operations",2025-12-01T00:00:00Z
+SKILL-015,Data Analysis,Data Engineering & Analytics,"Exploratory data analysis, hypothesis testing, metric tracking",2025-12-01T00:00:00Z
+SKILL-016,ETL Pipelines,Data Engineering & Analytics,"Extract-Transform-Load pipeline orchestration, batch & streaming",2025-12-01T00:00:00Z
+SKILL-017,Data Warehousing,Data Engineering & Analytics,"Star schema, dimensional modeling, Snowflake, BigQuery",2025-12-01T00:00:00Z
+SKILL-018,SQL Optimization,Data Engineering & Analytics,"Query execution plan analysis, index tuning, query rewrites",2025-12-01T00:00:00Z
+SKILL-019,Apache Spark,Data Engineering & Analytics,"Distributed dataset processing, PySpark, cluster compute tuning",2025-12-01T00:00:00Z
+SKILL-020,Tableau,Data Engineering & Analytics,"Enterprise analytics dashboards, data storytelling, KPI boards",2025-12-01T00:00:00Z
+SKILL-021,Power BI,Data Engineering & Analytics,"DAX queries, data modeling, business intelligence reports",2025-12-01T00:00:00Z
+SKILL-022,Machine Learning,AI & Machine Learning,"Supervised, unsupervised learning, model lifecycle management",2025-12-01T00:00:00Z
+SKILL-023,Deep Learning,AI & Machine Learning,"Neural networks, CNNs, RNNs, transformer architectures",2025-12-01T00:00:00Z
+SKILL-024,Natural Language Processing,AI & Machine Learning,"Tokenization, embeddings, text classification, LLM prompt engineering",2025-12-01T00:00:00Z
+SKILL-025,Computer Vision,AI & Machine Learning,"Image recognition, object detection, OpenCV, vision models",2025-12-01T00:00:00Z
+SKILL-026,Scikit-learn,AI & Machine Learning,"Classical ML modeling, cross-validation, hyperparameter tuning",2025-12-01T00:00:00Z
+SKILL-027,TensorFlow,AI & Machine Learning,"Model training, graph execution, Keras APIs",2025-12-01T00:00:00Z
+SKILL-028,PyTorch,AI & Machine Learning,"Dynamic computational graphs, tensor calculus, GPU training",2025-12-01T00:00:00Z
+SKILL-029,MLOps,AI & Machine Learning,"Model registries, MLflow, model monitoring, automated retraining",2025-12-01T00:00:00Z
+SKILL-030,AWS,Cloud & DevOps,"Amazon Web Services (EC2, S3, RDS, Lambda, IAM, ECS)",2025-12-01T00:00:00Z
+SKILL-031,Azure,Cloud & DevOps,"Microsoft Azure cloud services, Azure DevOps, AKS",2025-12-01T00:00:00Z
+SKILL-032,Google Cloud,Cloud & DevOps,"GCP (Compute Engine, GKE, BigQuery, Cloud Run)",2025-12-01T00:00:00Z
+SKILL-033,Docker,Cloud & DevOps,"Containerization, Dockerfile optimization, multi-stage builds",2025-12-01T00:00:00Z
+SKILL-034,Kubernetes,Cloud & DevOps,"Container orchestration, Helm charts, ingress, auto-scaling",2025-12-01T00:00:00Z
+SKILL-035,CI/CD,Cloud & DevOps,"Automated build, test, and release pipelines (GitHub Actions, GitLab)",2025-12-01T00:00:00Z
+SKILL-036,Terraform,Cloud & DevOps,"Infrastructure as Code, state management, multi-cloud modules",2025-12-01T00:00:00Z
+SKILL-037,Linux,Cloud & DevOps,"Linux system administration, bash scripting, kernel tuning, networking",2025-12-01T00:00:00Z
+SKILL-038,Cloud Monitoring,Cloud & DevOps,"Prometheus, Grafana, Datadog, alert management, telemetry",2025-12-01T00:00:00Z
+SKILL-039,Application Security,Cybersecurity & Networking,"OWASP Top 10 remediation, SAST/DAST tooling, secure coding",2025-12-01T00:00:00Z
+SKILL-040,Network Security,Cybersecurity & Networking,"Firewalls, VPNs, IDS/IPS, zero-trust network architectures",2025-12-01T00:00:00Z
+SKILL-041,Vulnerability Assessment,Cybersecurity & Networking,"Nessus, CVE analysis, automated vulnerability scanning",2025-12-01T00:00:00Z
+SKILL-042,IAM,Cybersecurity & Networking,"Identity and Access Management, SSO, SAML, OAuth2, RBAC/ABAC",2025-12-01T00:00:00Z
+SKILL-043,Security Monitoring,Cybersecurity & Networking,"SIEM, Splunk, SOC alerts, threat hunting, anomaly detection",2025-12-01T00:00:00Z
+SKILL-044,TCP/IP,Cybersecurity & Networking,"OSI model, routing protocols, subnetting, Wireshark packet analysis",2025-12-01T00:00:00Z
+SKILL-045,DNS,Cybersecurity & Networking,"Domain name resolution, BIND, DNSSEC, Route53",2025-12-01T00:00:00Z
+SKILL-046,Network Troubleshooting,Cybersecurity & Networking,"Latency debugging, packet loss investigation, traceroute, tcpdump",2025-12-01T00:00:00Z
+SKILL-047,Manual Testing,Software Quality Assurance,"Test plan authoring, exploratory testing, bug lifecycle reporting",2025-12-01T00:00:00Z
+SKILL-048,Automated Testing,Software Quality Assurance,"Test automation frameworks, regression testing suites",2025-12-01T00:00:00Z
+SKILL-049,API Testing,Software Quality Assurance,"Postman, Newman, REST API contract verification",2025-12-01T00:00:00Z
+SKILL-050,Selenium,Software Quality Assurance,"Browser automation, WebDriver, cross-browser test suites",2025-12-01T00:00:00Z
+SKILL-051,Playwright,Software Quality Assurance,"Modern end-to-end testing, headless browser automation",2025-12-01T00:00:00Z
+SKILL-052,Pytest,Software Quality Assurance,"Python test fixtures, parameterized testing, coverage analysis",2025-12-01T00:00:00Z
+SKILL-053,Performance Testing,Software Quality Assurance,"JMeter, k6, stress testing, throughput and latency benchmarking",2025-12-01T00:00:00Z
+SKILL-054,PostgreSQL,Databases & Operations,"Relational schema design, ACID transactions, PL/pgSQL, extensions",2025-12-01T00:00:00Z
+SKILL-055,MySQL,Databases & Operations,"InnoDB engine, replication, replication topology, query caching",2025-12-01T00:00:00Z
+SKILL-056,MongoDB,Databases & Operations,"Document data store, aggregation framework, sharding, replica sets",2025-12-01T00:00:00Z
+SKILL-057,Redis,Databases & Operations,"In-memory caching, pub/sub messaging, sorted sets, Redis cluster",2025-12-01T00:00:00Z
+SKILL-058,Database Design,Databases & Operations,"Relational normalization, ER modeling, constraint enforcement",2025-12-01T00:00:00Z
+SKILL-059,Incident Management,Databases & Operations,"PagerDuty on-call, root cause analysis (RCA), blameless postmortems",2025-12-01T00:00:00Z
+SKILL-060,IT Operations,Databases & Operations,"ITIL service management, infrastructure maintenance, system patching",2025-12-01T00:00:00Z

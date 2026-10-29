@@ -1,0 +1,34 @@
+[
+  {
+    "holiday_id": "HOL-2026-01",
+    "holiday_date": "2026-01-01",
+    "holiday_name": "New Year's Day",
+    "region_scope": "GLOBAL",
+    "is_paid": true,
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "holiday_id": "HOL-2026-02",
+    "holiday_date": "2026-01-19",
+    "holiday_name": "Martin Luther King Jr. Day / Tech Innovation Day",
+    "region_scope": "GLOBAL",
+    "is_paid": true,
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "holiday_id": "HOL-2026-03",
+    "holiday_date": "2026-02-16",
+    "holiday_name": "Presidents' Day / Global Engineering Day",
+    "region_scope": "GLOBAL",
+    "is_paid": true,
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "holiday_id": "HOL-2026-04",
+    "holiday_date": "2026-03-27",
+    "holiday_name": "Quarterly System Architecture Pause",
+    "region_scope": "GLOBAL",
+    "is_paid": true,
+    "created_at": "2025-12-01T00:00:00Z"
+  }
+]

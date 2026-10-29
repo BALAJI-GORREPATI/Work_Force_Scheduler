@@ -1,0 +1,422 @@
+[
+  {
+    "event_id": "AUD-0000001",
+    "actor_employee_id": "EMP-000001",
+    "action_type": "SWAP_APPLICATION",
+    "target_entity": "swap_requests",
+    "target_id": "SWP-2026-000001",
+    "previous_state": "APPROVED",
+    "new_state": "APPLIED",
+    "timestamp": "2026-01-10T11:05:00Z",
+    "metadata": {
+      "requester": "EMP-000003",
+      "target": "EMP-000004"
+    }
+  },
+  {
+    "event_id": "AUD-0000002",
+    "actor_employee_id": "EMP-000001",
+    "action_type": "SWAP_APPLICATION",
+    "target_entity": "swap_requests",
+    "target_id": "SWP-2026-000002",
+    "previous_state": "APPROVED",
+    "new_state": "APPLIED",
+    "timestamp": "2026-01-10T11:05:00Z",
+    "metadata": {
+      "requester": "EMP-000005",
+      "target": "EMP-000006"
+    }
+  },
+  {
+    "event_id": "AUD-0000003",
+    "actor_employee_id": "EMP-000001",
+    "action_type": "SWAP_APPLICATION",
+    "target_entity": "swap_requests",
+    "target_id": "SWP-2026-000003",
+    "previous_state": "APPROVED",
+    "new_state": "APPLIED",
+    "timestamp": "2026-01-10T11:05:00Z",
+    "metadata": {
+      "requester": "EMP-000007",
+      "target": "EMP-000008"
+    }
+  },
+  {
+    "event_id": "AUD-0000004",
+    "actor_employee_id": "EMP-000001",
+    "action_type": "SWAP_APPLICATION",
+    "target_entity": "swap_requests",
+    "target_id": "SWP-2026-000004",
+    "previous_state": "APPROVED",
+    "new_state": "APPLIED",
+    "timestamp": "2026-01-10T11:05:00Z",
+    "metadata": {
+      "requester": "EMP-000009",
+      "target": "EMP-000010"
+    }
+  },
+  {
+    "event_id": "AUD-0000005",
+    "actor_employee_id": "EMP-000001",
+    "action_type": "SWAP_APPLICATION",
+    "target_entity": "swap_requests",
+    "target_id": "SWP-2026-000005",
+    "previous_state": "APPROVED",
+    "new_state": "APPLIED",
+    "timestamp": "2026-01-10T11:05:00Z",
+    "metadata": {
+      "requester": "EMP-000011",
+      "target": "EMP-000012"
+    }
+  },
+  {
+    "event_id": "AUD-0000006",
+    "actor_employee_id": "EMP-000001",
+    "action_type": "SWAP_APPLICATION",
+    "target_entity": "swap_requests",
+    "target_id": "SWP-2026-000006",
+    "previous_state": "APPROVED",
+    "new_state": "APPLIED",
+    "timestamp": "2026-01-10T11:05:00Z",
+    "metadata": {
+      "requester": "EMP-000013",
+      "target": "EMP-000014"
+    }
+  },
+  {
+    "event_id": "AUD-0000007",
+    "actor_employee_id": "EMP-000001",
+    "action_type": "SWAP_APPLICATION",
+    "target_entity": "swap_requests",
+    "target_id": "SWP-2026-000007",
+    "previous_state": "APPROVED",
+    "new_state": "APPLIED",
+    "timestamp": "2026-01-10T11:05:00Z",
+    "metadata": {
+      "requester": "EMP-000015",
+      "target": "EMP-000016"
+    }
+  },
+  {
+    "event_id": "AUD-0000008",
+    "actor_employee_id": "EMP-000001",
+    "action_type": "SWAP_APPLICATION",
+    "target_entity": "swap_requests",
+    "target_id": "SWP-2026-000008",
+    "previous_state": "APPROVED",
+    "new_state": "APPLIED",
+    "timestamp": "2026-01-10T11:05:00Z",
+    "metadata": {
+      "requester": "EMP-000017",
+      "target": "EMP-000018"
+    }
+  },
+  {
+    "event_id": "AUD-0000009",
+    "actor_employee_id": "EMP-000001",
+    "action_type": "SWAP_APPLICATION",
+    "target_entity": "swap_requests",
+    "target_id": "SWP-2026-000009",
+    "previous_state": "APPROVED",
+    "new_state": "APPLIED",
+    "timestamp": "2026-01-10T11:05:00Z",
+    "metadata": {
+      "requester": "EMP-000019",
+      "target": "EMP-000020"
+    }
+  },
+  {
+    "event_id": "AUD-0000010",
+    "actor_employee_id": "EMP-000001",
+    "action_type": "SWAP_APPLICATION",
+    "target_entity": "swap_requests",
+    "target_id": "SWP-2026-000010",
+    "previous_state": "APPROVED",
+    "new_state": "APPLIED",
+    "timestamp": "2026-01-10T11:05:00Z",
+    "metadata": {
+      "requester": "EMP-000101",
+      "target": "EMP-000102"
+    }
+  },
+  {
+    "event_id": "AUD-0000011",
+    "actor_employee_id": "EMP-000003",
+    "action_type": "SWAP_APPLICATION",
+    "target_entity": "swap_requests",
+    "target_id": "SWP-2026-000011",
+    "previous_state": "APPROVED",
+    "new_state": "APPLIED",
+    "timestamp": "2026-01-10T11:05:00Z",
+    "metadata": {
+      "requester": "EMP-000103",
+      "target": "EMP-000104"
+    }
+  },
+  {
+    "event_id": "AUD-0000012",
+    "actor_employee_id": "EMP-000005",
+    "action_type": "SWAP_APPLICATION",
+    "target_entity": "swap_requests",
+    "target_id": "SWP-2026-000012",
+    "previous_state": "APPROVED",
+    "new_state": "APPLIED",
+    "timestamp": "2026-01-10T11:05:00Z",
+    "metadata": {
+      "requester": "EMP-000105",
+      "target": "EMP-000106"
+    }
+  },
+  {
+    "event_id": "AUD-0000013",
+    "actor_employee_id": "EMP-000007",
+    "action_type": "SWAP_APPLICATION",
+    "target_entity": "swap_requests",
+    "target_id": "SWP-2026-000013",
+    "previous_state": "APPROVED",
+    "new_state": "APPLIED",
+    "timestamp": "2026-01-10T11:05:00Z",
+    "metadata": {
+      "requester": "EMP-000107",
+      "target": "EMP-000108"
+    }
+  },
+  {
+    "event_id": "AUD-0000014",
+    "actor_employee_id": "EMP-000009",
+    "action_type": "SWAP_APPLICATION",
+    "target_entity": "swap_requests",
+    "target_id": "SWP-2026-000014",
+    "previous_state": "APPROVED",
+    "new_state": "APPLIED",
+    "timestamp": "2026-01-10T11:05:00Z",
+    "metadata": {
+      "requester": "EMP-000109",
+      "target": "EMP-000110"
+    }
+  },
+  {
+    "event_id": "AUD-0000015",
+    "actor_employee_id": "EMP-000011",
+    "action_type": "SWAP_APPLICATION",
+    "target_entity": "swap_requests",
+    "target_id": "SWP-2026-000015",
+    "previous_state": "APPROVED",
+    "new_state": "APPLIED",
+    "timestamp": "2026-01-10T11:05:00Z",
+    "metadata": {
+      "requester": "EMP-000111",
+      "target": "EMP-000112"
+    }
+  },
+  {
+    "event_id": "AUD-0000016",
+    "actor_employee_id": "EMP-000013",
+    "action_type": "SWAP_APPLICATION",
+    "target_entity": "swap_requests",
+    "target_id": "SWP-2026-000016",
+    "previous_state": "APPROVED",
+    "new_state": "APPLIED",
+    "timestamp": "2026-01-10T11:05:00Z",
+    "metadata": {
+      "requester": "EMP-000113",
+      "target": "EMP-000114"
+    }
+  },
+  {
+    "event_id": "AUD-0000017",
+    "actor_employee_id": "EMP-000015",
+    "action_type": "SWAP_APPLICATION",
+    "target_entity": "swap_requests",
+    "target_id": "SWP-2026-000017",
+    "previous_state": "APPROVED",
+    "new_state": "APPLIED",
+    "timestamp": "2026-01-10T11:05:00Z",
+    "metadata": {
+      "requester": "EMP-000115",
+      "target": "EMP-000116"
+    }
+  },
+  {
+    "event_id": "AUD-0000018",
+    "actor_employee_id": "EMP-000017",
+    "action_type": "SWAP_APPLICATION",
+    "target_entity": "swap_requests",
+    "target_id": "SWP-2026-000018",
+    "previous_state": "APPROVED",
+    "new_state": "APPLIED",
+    "timestamp": "2026-01-10T11:05:00Z",
+    "metadata": {
+      "requester": "EMP-000117",
+      "target": "EMP-000118"
+    }
+  },
+  {
+    "event_id": "AUD-0000019",
+    "actor_employee_id": "EMP-000019",
+    "action_type": "SWAP_APPLICATION",
+    "target_entity": "swap_requests",
+    "target_id": "SWP-2026-000019",
+    "previous_state": "APPROVED",
+    "new_state": "APPLIED",
+    "timestamp": "2026-01-10T11:05:00Z",
+    "metadata": {
+      "requester": "EMP-000219",
+      "target": "EMP-000120"
+    }
+  },
+  {
+    "event_id": "AUD-0000020",
+    "actor_employee_id": "EMP-000001",
+    "action_type": "SWAP_APPLICATION",
+    "target_entity": "swap_requests",
+    "target_id": "SWP-2026-000020",
+    "previous_state": "APPROVED",
+    "new_state": "APPLIED",
+    "timestamp": "2026-01-10T11:05:00Z",
+    "metadata": {
+      "requester": "EMP-000201",
+      "target": "EMP-000202"
+    }
+  },
+  {
+    "event_id": "AUD-0000021",
+    "actor_employee_id": "EMP-000003",
+    "action_type": "SWAP_APPLICATION",
+    "target_entity": "swap_requests",
+    "target_id": "SWP-2026-000021",
+    "previous_state": "APPROVED",
+    "new_state": "APPLIED",
+    "timestamp": "2026-01-10T11:05:00Z",
+    "metadata": {
+      "requester": "EMP-000203",
+      "target": "EMP-000204"
+    }
+  },
+  {
+    "event_id": "AUD-0000022",
+    "actor_employee_id": "EMP-000005",
+    "action_type": "SWAP_APPLICATION",
+    "target_entity": "swap_requests",
+    "target_id": "SWP-2026-000022",
+    "previous_state": "APPROVED",
+    "new_state": "APPLIED",
+    "timestamp": "2026-01-10T11:05:00Z",
+    "metadata": {
+      "requester": "EMP-000205",
+      "target": "EMP-000206"
+    }
+  },
+  {
+    "event_id": "AUD-0000023",
+    "actor_employee_id": "EMP-000007",
+    "action_type": "SWAP_APPLICATION",
+    "target_entity": "swap_requests",
+    "target_id": "SWP-2026-000023",
+    "previous_state": "APPROVED",
+    "new_state": "APPLIED",
+    "timestamp": "2026-01-10T11:05:00Z",
+    "metadata": {
+      "requester": "EMP-000207",
+      "target": "EMP-000208"
+    }
+  },
+  {
+    "event_id": "AUD-0000024",
+    "actor_employee_id": "EMP-000009",
+    "action_type": "SWAP_APPLICATION",
+    "target_entity": "swap_requests",
+    "target_id": "SWP-2026-000024",
+    "previous_state": "APPROVED",
+    "new_state": "APPLIED",
+    "timestamp": "2026-01-10T11:05:00Z",
+    "metadata": {
+      "requester": "EMP-000209",
+      "target": "EMP-000210"
+    }
+  },
+  {
+    "event_id": "AUD-0000025",
+    "actor_employee_id": "EMP-000011",
+    "action_type": "SWAP_APPLICATION",
+    "target_entity": "swap_requests",
+    "target_id": "SWP-2026-000025",
+    "previous_state": "APPROVED",
+    "new_state": "APPLIED",
+    "timestamp": "2026-01-10T11:05:00Z",
+    "metadata": {
+      "requester": "EMP-000211",
+      "target": "EMP-000212"
+    }
+  },
+  {
+    "event_id": "AUD-0000026",
+    "actor_employee_id": "EMP-000013",
+    "action_type": "SWAP_APPLICATION",
+    "target_entity": "swap_requests",
+    "target_id": "SWP-2026-000026",
+    "previous_state": "APPROVED",
+    "new_state": "APPLIED",
+    "timestamp": "2026-01-10T11:05:00Z",
+    "metadata": {
+      "requester": "EMP-000213",
+      "target": "EMP-000214"
+    }
+  },
+  {
+    "event_id": "AUD-0000027",
+    "actor_employee_id": "EMP-000015",
+    "action_type": "SWAP_APPLICATION",
+    "target_entity": "swap_requests",
+    "target_id": "SWP-2026-000027",
+    "previous_state": "APPROVED",
+    "new_state": "APPLIED",
+    "timestamp": "2026-01-10T11:05:00Z",
+    "metadata": {
+      "requester": "EMP-000315",
+      "target": "EMP-000216"
+    }
+  },
+  {
+    "event_id": "AUD-0000028",
+    "actor_employee_id": "EMP-000017",
+    "action_type": "SWAP_APPLICATION",
+    "target_entity": "swap_requests",
+    "target_id": "SWP-2026-000028",
+    "previous_state": "APPROVED",
+    "new_state": "APPLIED",
+    "timestamp": "2026-01-10T11:05:00Z",
+    "metadata": {
+      "requester": "EMP-000217",
+      "target": "EMP-000218"
+    }
+  },
+  {
+    "event_id": "AUD-0000029",
+    "actor_employee_id": "EMP-000019",
+    "action_type": "SWAP_APPLICATION",
+    "target_entity": "swap_requests",
+    "target_id": "SWP-2026-000029",
+    "previous_state": "APPROVED",
+    "new_state": "APPLIED",
+    "timestamp": "2026-01-10T11:05:00Z",
+    "metadata": {
+      "requester": "EMP-000319",
+      "target": "EMP-000220"
+    }
+  },
+  {
+    "event_id": "AUD-0000030",
+    "actor_employee_id": "EMP-000002",
+    "action_type": "SWAP_APPLICATION",
+    "target_entity": "swap_requests",
+    "target_id": "SWP-2026-000030",
+    "previous_state": "APPROVED",
+    "new_state": "APPLIED",
+    "timestamp": "2026-01-10T11:05:00Z",
+    "metadata": {
+      "requester": "EMP-000001",
+      "target": "EMP-000002"
+    }
+  }
+]

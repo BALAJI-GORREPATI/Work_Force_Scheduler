@@ -1,0 +1,57 @@
+[
+  {
+    "anomaly_id": "ANOM-0001",
+    "scenario_type": "SCENARIO_1_DOUBLE_BOOKING",
+    "affected_entity": "shift_assignments",
+    "record_id": "ASG-ANOM-0001",
+    "related_record_id": "ASG-0000001",
+    "rule_violated": "NO_OVERLAPPING_SHIFTS",
+    "expected_severity": "CRITICAL",
+    "baseline_reference": "ASG-0000001",
+    "injected_details": "Employee EMP-000001 double-booked across concurrent shifts SHIFT-2026-01-01-MORN-TEAM-001 and SHIFT-2026-01-01-MORN-TEAM-002 on 2026-01-01."
+  },
+  {
+    "anomaly_id": "ANOM-0002",
+    "scenario_type": "SCENARIO_2_LEAVE_CONFLICT",
+    "affected_entity": "shift_assignments",
+    "record_id": "ASG-ANOM-0002",
+    "related_record_id": "LVE-2026-000002",
+    "rule_violated": "NO_SHIFT_DURING_APPROVED_LEAVE",
+    "expected_severity": "CRITICAL",
+    "baseline_reference": "LVE-2026-000002",
+    "injected_details": "Employee EMP-000002 scheduled for shift SHIFT-2026-03-18-MORN-TEAM-002 during approved leave LVE-2026-000002 on 2026-03-18."
+  },
+  {
+    "anomaly_id": "ANOM-0003",
+    "scenario_type": "SCENARIO_3_SKILL_ABSENT",
+    "affected_entity": "shift_assignments",
+    "record_id": "ASG-0000001",
+    "related_record_id": "REQ-ANOM-0003",
+    "rule_violated": "REQUIRED_SKILL_SATISFACTION",
+    "expected_severity": "HIGH",
+    "baseline_reference": "ASG-0000001",
+    "injected_details": "Shift SHIFT-2026-01-01-MORN-TEAM-001 mandates skill SKILL-002 (EXPERT), but assigned employee EMP-000001 lacks this skill."
+  },
+  {
+    "anomaly_id": "ANOM-0004",
+    "scenario_type": "SCENARIO_4_OVERTIME_CAP_EXCEEDED",
+    "affected_entity": "shift_assignments",
+    "record_id": "ASG-ANOM-OT-06",
+    "related_record_id": "ASG-ANOM-OT-00,ASG-ANOM-OT-01,ASG-ANOM-OT-02",
+    "rule_violated": "WEEKLY_HOURS_CEILING_48H",
+    "expected_severity": "HIGH",
+    "baseline_reference": "EMP-000503",
+    "injected_details": "Employee EMP-000503 scheduled for 56.0 hours (7 shifts) in week 2, exceeding the 48.0h weekly overtime cap."
+  },
+  {
+    "anomaly_id": "ANOM-0005",
+    "scenario_type": "SCENARIO_5_UNAPPROVED_SWAP_APPLIED",
+    "affected_entity": "swap_requests",
+    "record_id": "SWP-ANOM-0005",
+    "related_record_id": null,
+    "rule_violated": "SWAP_APPLICATION_REQUIRES_MANAGER_APPROVAL",
+    "expected_severity": "CRITICAL",
+    "baseline_reference": "SWP-ANOM-0005",
+    "injected_details": "Swap request SWP-ANOM-0005 marked as APPLIED without required manager approval or decision timestamp."
+  }
+]

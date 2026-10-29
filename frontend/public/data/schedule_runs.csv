@@ -1,0 +1,2 @@
+run_id,start_date,end_date,algorithm,status,total_shifts,assigned_shifts,uncovered_shifts,coverage_rate,skill_coverage_rate,runtime_seconds,created_at
+RUN-20260101-001,2026-01-01,2026-03-31,CONSTRAINT_PROPAGATION_WITH_FAIRNESS,SUCCESS,5400,5400,0,100.0,100.0,1.482,2025-12-30T10:00:00Z

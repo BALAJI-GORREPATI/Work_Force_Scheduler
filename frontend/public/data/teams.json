@@ -1,0 +1,702 @@
+[
+  {
+    "team_id": "TEAM-001",
+    "team_name": "Platform Engineering - Alpha #1",
+    "department": "Platform Engineering",
+    "manager_employee_id": "EMP-000001",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-002",
+    "team_name": "Core Backend Services - Beta #1",
+    "department": "Core Backend Services",
+    "manager_employee_id": "EMP-000002",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-003",
+    "team_name": "Frontend & User Experience - Gamma #1",
+    "department": "Frontend & User Experience",
+    "manager_employee_id": "EMP-000003",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-004",
+    "team_name": "Data Platform & AI - Delta #1",
+    "department": "Data Platform & AI",
+    "manager_employee_id": "EMP-000004",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-005",
+    "team_name": "Cloud Infrastructure & SRE - Epsilon #1",
+    "department": "Cloud Infrastructure & SRE",
+    "manager_employee_id": "EMP-000005",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-006",
+    "team_name": "Cybersecurity Operations - Zeta #1",
+    "department": "Cybersecurity Operations",
+    "manager_employee_id": "EMP-000006",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-007",
+    "team_name": "Quality Assurance & Test Automation - Core #1",
+    "department": "Quality Assurance & Test Automation",
+    "manager_employee_id": "EMP-000007",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-008",
+    "team_name": "Enterprise Systems & IT Ops - Edge #1",
+    "department": "Enterprise Systems & IT Ops",
+    "manager_employee_id": "EMP-000008",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-009",
+    "team_name": "Mobile & Edge Computing - Platform #1",
+    "department": "Mobile & Edge Computing",
+    "manager_employee_id": "EMP-000009",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-010",
+    "team_name": "Database Systems & Storage - Security Ops #1",
+    "department": "Database Systems & Storage",
+    "manager_employee_id": "EMP-000010",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-011",
+    "team_name": "Platform Engineering - SRE #1",
+    "department": "Platform Engineering",
+    "manager_employee_id": "EMP-000011",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-012",
+    "team_name": "Core Backend Services - Analytics #1",
+    "department": "Core Backend Services",
+    "manager_employee_id": "EMP-000012",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-013",
+    "team_name": "Frontend & User Experience - Automation #1",
+    "department": "Frontend & User Experience",
+    "manager_employee_id": "EMP-000013",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-014",
+    "team_name": "Data Platform & AI - Performance #1",
+    "department": "Data Platform & AI",
+    "manager_employee_id": "EMP-000014",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-015",
+    "team_name": "Cloud Infrastructure & SRE - Alpha #2",
+    "department": "Cloud Infrastructure & SRE",
+    "manager_employee_id": "EMP-000015",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-016",
+    "team_name": "Cybersecurity Operations - Beta #2",
+    "department": "Cybersecurity Operations",
+    "manager_employee_id": "EMP-000016",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-017",
+    "team_name": "Quality Assurance & Test Automation - Gamma #2",
+    "department": "Quality Assurance & Test Automation",
+    "manager_employee_id": "EMP-000017",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-018",
+    "team_name": "Enterprise Systems & IT Ops - Delta #2",
+    "department": "Enterprise Systems & IT Ops",
+    "manager_employee_id": "EMP-000018",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-019",
+    "team_name": "Mobile & Edge Computing - Epsilon #2",
+    "department": "Mobile & Edge Computing",
+    "manager_employee_id": "EMP-000019",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-020",
+    "team_name": "Database Systems & Storage - Zeta #2",
+    "department": "Database Systems & Storage",
+    "manager_employee_id": "EMP-000020",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-021",
+    "team_name": "Platform Engineering - Core #2",
+    "department": "Platform Engineering",
+    "manager_employee_id": "EMP-000021",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-022",
+    "team_name": "Core Backend Services - Edge #2",
+    "department": "Core Backend Services",
+    "manager_employee_id": "EMP-000022",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-023",
+    "team_name": "Frontend & User Experience - Platform #2",
+    "department": "Frontend & User Experience",
+    "manager_employee_id": "EMP-000023",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-024",
+    "team_name": "Data Platform & AI - Security Ops #2",
+    "department": "Data Platform & AI",
+    "manager_employee_id": "EMP-000024",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-025",
+    "team_name": "Cloud Infrastructure & SRE - SRE #2",
+    "department": "Cloud Infrastructure & SRE",
+    "manager_employee_id": "EMP-000025",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-026",
+    "team_name": "Cybersecurity Operations - Analytics #2",
+    "department": "Cybersecurity Operations",
+    "manager_employee_id": "EMP-000026",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-027",
+    "team_name": "Quality Assurance & Test Automation - Automation #2",
+    "department": "Quality Assurance & Test Automation",
+    "manager_employee_id": "EMP-000027",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-028",
+    "team_name": "Enterprise Systems & IT Ops - Performance #2",
+    "department": "Enterprise Systems & IT Ops",
+    "manager_employee_id": "EMP-000028",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-029",
+    "team_name": "Mobile & Edge Computing - Alpha #3",
+    "department": "Mobile & Edge Computing",
+    "manager_employee_id": "EMP-000029",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-030",
+    "team_name": "Database Systems & Storage - Beta #3",
+    "department": "Database Systems & Storage",
+    "manager_employee_id": "EMP-000030",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-031",
+    "team_name": "Platform Engineering - Gamma #3",
+    "department": "Platform Engineering",
+    "manager_employee_id": "EMP-000031",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-032",
+    "team_name": "Core Backend Services - Delta #3",
+    "department": "Core Backend Services",
+    "manager_employee_id": "EMP-000032",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-033",
+    "team_name": "Frontend & User Experience - Epsilon #3",
+    "department": "Frontend & User Experience",
+    "manager_employee_id": "EMP-000033",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-034",
+    "team_name": "Data Platform & AI - Zeta #3",
+    "department": "Data Platform & AI",
+    "manager_employee_id": "EMP-000034",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-035",
+    "team_name": "Cloud Infrastructure & SRE - Core #3",
+    "department": "Cloud Infrastructure & SRE",
+    "manager_employee_id": "EMP-000035",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-036",
+    "team_name": "Cybersecurity Operations - Edge #3",
+    "department": "Cybersecurity Operations",
+    "manager_employee_id": "EMP-000036",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-037",
+    "team_name": "Quality Assurance & Test Automation - Platform #3",
+    "department": "Quality Assurance & Test Automation",
+    "manager_employee_id": "EMP-000037",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-038",
+    "team_name": "Enterprise Systems & IT Ops - Security Ops #3",
+    "department": "Enterprise Systems & IT Ops",
+    "manager_employee_id": "EMP-000038",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-039",
+    "team_name": "Mobile & Edge Computing - SRE #3",
+    "department": "Mobile & Edge Computing",
+    "manager_employee_id": "EMP-000039",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-040",
+    "team_name": "Database Systems & Storage - Analytics #3",
+    "department": "Database Systems & Storage",
+    "manager_employee_id": "EMP-000040",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-041",
+    "team_name": "Platform Engineering - Automation #3",
+    "department": "Platform Engineering",
+    "manager_employee_id": "EMP-000041",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-042",
+    "team_name": "Core Backend Services - Performance #3",
+    "department": "Core Backend Services",
+    "manager_employee_id": "EMP-000042",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-043",
+    "team_name": "Frontend & User Experience - Alpha #4",
+    "department": "Frontend & User Experience",
+    "manager_employee_id": "EMP-000043",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-044",
+    "team_name": "Data Platform & AI - Beta #4",
+    "department": "Data Platform & AI",
+    "manager_employee_id": "EMP-000044",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-045",
+    "team_name": "Cloud Infrastructure & SRE - Gamma #4",
+    "department": "Cloud Infrastructure & SRE",
+    "manager_employee_id": "EMP-000045",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-046",
+    "team_name": "Cybersecurity Operations - Delta #4",
+    "department": "Cybersecurity Operations",
+    "manager_employee_id": "EMP-000046",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-047",
+    "team_name": "Quality Assurance & Test Automation - Epsilon #4",
+    "department": "Quality Assurance & Test Automation",
+    "manager_employee_id": "EMP-000047",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-048",
+    "team_name": "Enterprise Systems & IT Ops - Zeta #4",
+    "department": "Enterprise Systems & IT Ops",
+    "manager_employee_id": "EMP-000048",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-049",
+    "team_name": "Mobile & Edge Computing - Core #4",
+    "department": "Mobile & Edge Computing",
+    "manager_employee_id": "EMP-000049",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-050",
+    "team_name": "Database Systems & Storage - Edge #4",
+    "department": "Database Systems & Storage",
+    "manager_employee_id": "EMP-000050",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-051",
+    "team_name": "Platform Engineering - Platform #4",
+    "department": "Platform Engineering",
+    "manager_employee_id": "EMP-000051",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-052",
+    "team_name": "Core Backend Services - Security Ops #4",
+    "department": "Core Backend Services",
+    "manager_employee_id": "EMP-000052",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-053",
+    "team_name": "Frontend & User Experience - SRE #4",
+    "department": "Frontend & User Experience",
+    "manager_employee_id": "EMP-000053",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-054",
+    "team_name": "Data Platform & AI - Analytics #4",
+    "department": "Data Platform & AI",
+    "manager_employee_id": "EMP-000054",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-055",
+    "team_name": "Cloud Infrastructure & SRE - Automation #4",
+    "department": "Cloud Infrastructure & SRE",
+    "manager_employee_id": "EMP-000055",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-056",
+    "team_name": "Cybersecurity Operations - Performance #4",
+    "department": "Cybersecurity Operations",
+    "manager_employee_id": "EMP-000056",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-057",
+    "team_name": "Quality Assurance & Test Automation - Alpha #5",
+    "department": "Quality Assurance & Test Automation",
+    "manager_employee_id": "EMP-000057",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-058",
+    "team_name": "Enterprise Systems & IT Ops - Beta #5",
+    "department": "Enterprise Systems & IT Ops",
+    "manager_employee_id": "EMP-000058",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-059",
+    "team_name": "Mobile & Edge Computing - Gamma #5",
+    "department": "Mobile & Edge Computing",
+    "manager_employee_id": "EMP-000059",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-060",
+    "team_name": "Database Systems & Storage - Delta #5",
+    "department": "Database Systems & Storage",
+    "manager_employee_id": "EMP-000060",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-061",
+    "team_name": "Platform Engineering - Epsilon #5",
+    "department": "Platform Engineering",
+    "manager_employee_id": "EMP-000061",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-062",
+    "team_name": "Core Backend Services - Zeta #5",
+    "department": "Core Backend Services",
+    "manager_employee_id": "EMP-000062",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-063",
+    "team_name": "Frontend & User Experience - Core #5",
+    "department": "Frontend & User Experience",
+    "manager_employee_id": "EMP-000063",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-064",
+    "team_name": "Data Platform & AI - Edge #5",
+    "department": "Data Platform & AI",
+    "manager_employee_id": "EMP-000064",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-065",
+    "team_name": "Cloud Infrastructure & SRE - Platform #5",
+    "department": "Cloud Infrastructure & SRE",
+    "manager_employee_id": "EMP-000065",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-066",
+    "team_name": "Cybersecurity Operations - Security Ops #5",
+    "department": "Cybersecurity Operations",
+    "manager_employee_id": "EMP-000066",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-067",
+    "team_name": "Quality Assurance & Test Automation - SRE #5",
+    "department": "Quality Assurance & Test Automation",
+    "manager_employee_id": "EMP-000067",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-068",
+    "team_name": "Enterprise Systems & IT Ops - Analytics #5",
+    "department": "Enterprise Systems & IT Ops",
+    "manager_employee_id": "EMP-000068",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-069",
+    "team_name": "Mobile & Edge Computing - Automation #5",
+    "department": "Mobile & Edge Computing",
+    "manager_employee_id": "EMP-000069",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-070",
+    "team_name": "Database Systems & Storage - Performance #5",
+    "department": "Database Systems & Storage",
+    "manager_employee_id": "EMP-000070",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-071",
+    "team_name": "Platform Engineering - Alpha #6",
+    "department": "Platform Engineering",
+    "manager_employee_id": "EMP-000071",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-072",
+    "team_name": "Core Backend Services - Beta #6",
+    "department": "Core Backend Services",
+    "manager_employee_id": "EMP-000072",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-073",
+    "team_name": "Frontend & User Experience - Gamma #6",
+    "department": "Frontend & User Experience",
+    "manager_employee_id": "EMP-000073",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-074",
+    "team_name": "Data Platform & AI - Delta #6",
+    "department": "Data Platform & AI",
+    "manager_employee_id": "EMP-000074",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-075",
+    "team_name": "Cloud Infrastructure & SRE - Epsilon #6",
+    "department": "Cloud Infrastructure & SRE",
+    "manager_employee_id": "EMP-000075",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-076",
+    "team_name": "Cybersecurity Operations - Zeta #6",
+    "department": "Cybersecurity Operations",
+    "manager_employee_id": "EMP-000076",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-077",
+    "team_name": "Quality Assurance & Test Automation - Core #6",
+    "department": "Quality Assurance & Test Automation",
+    "manager_employee_id": "EMP-000077",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-078",
+    "team_name": "Enterprise Systems & IT Ops - Edge #6",
+    "department": "Enterprise Systems & IT Ops",
+    "manager_employee_id": "EMP-000078",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-079",
+    "team_name": "Mobile & Edge Computing - Platform #6",
+    "department": "Mobile & Edge Computing",
+    "manager_employee_id": "EMP-000079",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-080",
+    "team_name": "Database Systems & Storage - Security Ops #6",
+    "department": "Database Systems & Storage",
+    "manager_employee_id": "EMP-000080",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-081",
+    "team_name": "Platform Engineering - SRE #6",
+    "department": "Platform Engineering",
+    "manager_employee_id": "EMP-000081",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-082",
+    "team_name": "Core Backend Services - Analytics #6",
+    "department": "Core Backend Services",
+    "manager_employee_id": "EMP-000082",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-083",
+    "team_name": "Frontend & User Experience - Automation #6",
+    "department": "Frontend & User Experience",
+    "manager_employee_id": "EMP-000083",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-084",
+    "team_name": "Data Platform & AI - Performance #6",
+    "department": "Data Platform & AI",
+    "manager_employee_id": "EMP-000084",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-085",
+    "team_name": "Cloud Infrastructure & SRE - Alpha #7",
+    "department": "Cloud Infrastructure & SRE",
+    "manager_employee_id": "EMP-000085",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-086",
+    "team_name": "Cybersecurity Operations - Beta #7",
+    "department": "Cybersecurity Operations",
+    "manager_employee_id": "EMP-000086",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-087",
+    "team_name": "Quality Assurance & Test Automation - Gamma #7",
+    "department": "Quality Assurance & Test Automation",
+    "manager_employee_id": "EMP-000087",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-088",
+    "team_name": "Enterprise Systems & IT Ops - Delta #7",
+    "department": "Enterprise Systems & IT Ops",
+    "manager_employee_id": "EMP-000088",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-089",
+    "team_name": "Mobile & Edge Computing - Epsilon #7",
+    "department": "Mobile & Edge Computing",
+    "manager_employee_id": "EMP-000089",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-090",
+    "team_name": "Database Systems & Storage - Zeta #7",
+    "department": "Database Systems & Storage",
+    "manager_employee_id": "EMP-000090",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-091",
+    "team_name": "Platform Engineering - Core #7",
+    "department": "Platform Engineering",
+    "manager_employee_id": "EMP-000091",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-092",
+    "team_name": "Core Backend Services - Edge #7",
+    "department": "Core Backend Services",
+    "manager_employee_id": "EMP-000092",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-093",
+    "team_name": "Frontend & User Experience - Platform #7",
+    "department": "Frontend & User Experience",
+    "manager_employee_id": "EMP-000093",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-094",
+    "team_name": "Data Platform & AI - Security Ops #7",
+    "department": "Data Platform & AI",
+    "manager_employee_id": "EMP-000094",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-095",
+    "team_name": "Cloud Infrastructure & SRE - SRE #7",
+    "department": "Cloud Infrastructure & SRE",
+    "manager_employee_id": "EMP-000095",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-096",
+    "team_name": "Cybersecurity Operations - Analytics #7",
+    "department": "Cybersecurity Operations",
+    "manager_employee_id": "EMP-000096",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-097",
+    "team_name": "Quality Assurance & Test Automation - Automation #7",
+    "department": "Quality Assurance & Test Automation",
+    "manager_employee_id": "EMP-000097",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-098",
+    "team_name": "Enterprise Systems & IT Ops - Performance #7",
+    "department": "Enterprise Systems & IT Ops",
+    "manager_employee_id": "EMP-000098",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-099",
+    "team_name": "Mobile & Edge Computing - Alpha #8",
+    "department": "Mobile & Edge Computing",
+    "manager_employee_id": "EMP-000099",
+    "created_at": "2025-12-01T00:00:00Z"
+  },
+  {
+    "team_id": "TEAM-100",
+    "team_name": "Database Systems & Storage - Beta #8",
+    "department": "Database Systems & Storage",
+    "manager_employee_id": "EMP-000100",
+    "created_at": "2025-12-01T00:00:00Z"
+  }
+]

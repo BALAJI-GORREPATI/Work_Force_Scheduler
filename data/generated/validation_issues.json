@@ -1,0 +1,62 @@
+[
+  {
+    "issue_id": "ISS-0000001",
+    "issue_type": "DOUBLE_BOOKING",
+    "affected_entity": "shift_assignments",
+    "record_id": "ASG-ANOM-0001",
+    "related_record_id": "ASG-0000001",
+    "rule_violated": "NO_OVERLAPPING_SHIFTS",
+    "severity": "CRITICAL",
+    "description": "Employee EMP-000001 is double-booked across assignments ASG-0000001 and ASG-ANOM-0001.",
+    "corrective_action": "Deconflict assignments by removing or rescheduling one shift.",
+    "detected_at": "2026-10-29T07:03:47.144544Z"
+  },
+  {
+    "issue_id": "ISS-0000002",
+    "issue_type": "LEAVE_CONFLICT",
+    "affected_entity": "shift_assignments",
+    "record_id": "ASG-ANOM-0002",
+    "related_record_id": "LVE-2026-000002",
+    "rule_violated": "NO_SHIFT_DURING_APPROVED_LEAVE",
+    "severity": "CRITICAL",
+    "description": "Employee EMP-000002 is scheduled on 2026-03-18 while on approved leave (LVE-2026-000002).",
+    "corrective_action": "Cancel shift assignment or find a replacement employee.",
+    "detected_at": "2026-10-29T07:03:47.154802Z"
+  },
+  {
+    "issue_id": "ISS-0000003",
+    "issue_type": "SKILL_MISSING",
+    "affected_entity": "shift_assignments",
+    "record_id": "ASG-0000001",
+    "related_record_id": "REQ-ANOM-0003",
+    "rule_violated": "REQUIRED_SKILL_SATISFACTION",
+    "severity": "HIGH",
+    "description": "Shift SHIFT-2026-01-01-MORN-TEAM-001 requires skill SKILL-002, but assigned employee EMP-000001 does not have this qualification.",
+    "corrective_action": "Assign a qualified team member possessing the required IT skill.",
+    "detected_at": "2026-10-29T07:03:47.159801Z"
+  },
+  {
+    "issue_id": "ISS-0000004",
+    "issue_type": "OVERTIME_EXCEEDED",
+    "affected_entity": "shift_assignments",
+    "record_id": "ASG-ANOM-OT-06",
+    "related_record_id": "ASG-ANOM-OT-00,ASG-ANOM-OT-01,ASG-ANOM-OT-02",
+    "rule_violated": "WEEKLY_HOURS_CEILING_48H",
+    "severity": "HIGH",
+    "description": "Employee EMP-000503 is scheduled for 56.0 hours in calendar week 2, exceeding the 48.0h weekly overtime cap.",
+    "corrective_action": "Redistribute shifts to ensure weekly hours do not exceed 48.0 hours.",
+    "detected_at": "2026-10-29T07:03:47.166087Z"
+  },
+  {
+    "issue_id": "ISS-0000005",
+    "issue_type": "UNAPPROVED_SWAP_APPLIED",
+    "affected_entity": "swap_requests",
+    "record_id": "SWP-ANOM-0005",
+    "related_record_id": "ASG-0000004",
+    "rule_violated": "SWAP_APPLICATION_REQUIRES_MANAGER_APPROVAL",
+    "severity": "CRITICAL",
+    "description": "Swap request SWP-ANOM-0005 was applied without recorded manager approval.",
+    "corrective_action": "Rollback swap application until formal manager review is conducted.",
+    "detected_at": "2026-10-29T07:03:47.166299Z"
+  }
+]

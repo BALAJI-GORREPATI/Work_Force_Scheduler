@@ -1,0 +1,101 @@
+team_id,team_name,department,manager_employee_id,created_at
+TEAM-001,Platform Engineering - Alpha #1,Platform Engineering,EMP-000001,2025-12-01T00:00:00Z
+TEAM-002,Core Backend Services - Beta #1,Core Backend Services,EMP-000002,2025-12-01T00:00:00Z
+TEAM-003,Frontend & User Experience - Gamma #1,Frontend & User Experience,EMP-000003,2025-12-01T00:00:00Z
+TEAM-004,Data Platform & AI - Delta #1,Data Platform & AI,EMP-000004,2025-12-01T00:00:00Z
+TEAM-005,Cloud Infrastructure & SRE - Epsilon #1,Cloud Infrastructure & SRE,EMP-000005,2025-12-01T00:00:00Z
+TEAM-006,Cybersecurity Operations - Zeta #1,Cybersecurity Operations,EMP-000006,2025-12-01T00:00:00Z
+TEAM-007,Quality Assurance & Test Automation - Core #1,Quality Assurance & Test Automation,EMP-000007,2025-12-01T00:00:00Z
+TEAM-008,Enterprise Systems & IT Ops - Edge #1,Enterprise Systems & IT Ops,EMP-000008,2025-12-01T00:00:00Z
+TEAM-009,Mobile & Edge Computing - Platform #1,Mobile & Edge Computing,EMP-000009,2025-12-01T00:00:00Z
+TEAM-010,Database Systems & Storage - Security Ops #1,Database Systems & Storage,EMP-000010,2025-12-01T00:00:00Z
+TEAM-011,Platform Engineering - SRE #1,Platform Engineering,EMP-000011,2025-12-01T00:00:00Z
+TEAM-012,Core Backend Services - Analytics #1,Core Backend Services,EMP-000012,2025-12-01T00:00:00Z
+TEAM-013,Frontend & User Experience - Automation #1,Frontend & User Experience,EMP-000013,2025-12-01T00:00:00Z
+TEAM-014,Data Platform & AI - Performance #1,Data Platform & AI,EMP-000014,2025-12-01T00:00:00Z
+TEAM-015,Cloud Infrastructure & SRE - Alpha #2,Cloud Infrastructure & SRE,EMP-000015,2025-12-01T00:00:00Z
+TEAM-016,Cybersecurity Operations - Beta #2,Cybersecurity Operations,EMP-000016,2025-12-01T00:00:00Z
+TEAM-017,Quality Assurance & Test Automation - Gamma #2,Quality Assurance & Test Automation,EMP-000017,2025-12-01T00:00:00Z
+TEAM-018,Enterprise Systems & IT Ops - Delta #2,Enterprise Systems & IT Ops,EMP-000018,2025-12-01T00:00:00Z
+TEAM-019,Mobile & Edge Computing - Epsilon #2,Mobile & Edge Computing,EMP-000019,2025-12-01T00:00:00Z
+TEAM-020,Database Systems & Storage - Zeta #2,Database Systems & Storage,EMP-000020,2025-12-01T00:00:00Z
+TEAM-021,Platform Engineering - Core #2,Platform Engineering,EMP-000021,2025-12-01T00:00:00Z
+TEAM-022,Core Backend Services - Edge #2,Core Backend Services,EMP-000022,2025-12-01T00:00:00Z
+TEAM-023,Frontend & User Experience - Platform #2,Frontend & User Experience,EMP-000023,2025-12-01T00:00:00Z
+TEAM-024,Data Platform & AI - Security Ops #2,Data Platform & AI,EMP-000024,2025-12-01T00:00:00Z
+TEAM-025,Cloud Infrastructure & SRE - SRE #2,Cloud Infrastructure & SRE,EMP-000025,2025-12-01T00:00:00Z
+TEAM-026,Cybersecurity Operations - Analytics #2,Cybersecurity Operations,EMP-000026,2025-12-01T00:00:00Z
+TEAM-027,Quality Assurance & Test Automation - Automation #2,Quality Assurance & Test Automation,EMP-000027,2025-12-01T00:00:00Z
+TEAM-028,Enterprise Systems & IT Ops - Performance #2,Enterprise Systems & IT Ops,EMP-000028,2025-12-01T00:00:00Z
+TEAM-029,Mobile & Edge Computing - Alpha #3,Mobile & Edge Computing,EMP-000029,2025-12-01T00:00:00Z
+TEAM-030,Database Systems & Storage - Beta #3,Database Systems & Storage,EMP-000030,2025-12-01T00:00:00Z
+TEAM-031,Platform Engineering - Gamma #3,Platform Engineering,EMP-000031,2025-12-01T00:00:00Z
+TEAM-032,Core Backend Services - Delta #3,Core Backend Services,EMP-000032,2025-12-01T00:00:00Z
+TEAM-033,Frontend & User Experience - Epsilon #3,Frontend & User Experience,EMP-000033,2025-12-01T00:00:00Z
+TEAM-034,Data Platform & AI - Zeta #3,Data Platform & AI,EMP-000034,2025-12-01T00:00:00Z
+TEAM-035,Cloud Infrastructure & SRE - Core #3,Cloud Infrastructure & SRE,EMP-000035,2025-12-01T00:00:00Z
+TEAM-036,Cybersecurity Operations - Edge #3,Cybersecurity Operations,EMP-000036,2025-12-01T00:00:00Z
+TEAM-037,Quality Assurance & Test Automation - Platform #3,Quality Assurance & Test Automation,EMP-000037,2025-12-01T00:00:00Z
+TEAM-038,Enterprise Systems & IT Ops - Security Ops #3,Enterprise Systems & IT Ops,EMP-000038,2025-12-01T00:00:00Z
+TEAM-039,Mobile & Edge Computing - SRE #3,Mobile & Edge Computing,EMP-000039,2025-12-01T00:00:00Z
+TEAM-040,Database Systems & Storage - Analytics #3,Database Systems & Storage,EMP-000040,2025-12-01T00:00:00Z
+TEAM-041,Platform Engineering - Automation #3,Platform Engineering,EMP-000041,2025-12-01T00:00:00Z
+TEAM-042,Core Backend Services - Performance #3,Core Backend Services,EMP-000042,2025-12-01T00:00:00Z
+TEAM-043,Frontend & User Experience - Alpha #4,Frontend & User Experience,EMP-000043,2025-12-01T00:00:00Z
+TEAM-044,Data Platform & AI - Beta #4,Data Platform & AI,EMP-000044,2025-12-01T00:00:00Z
+TEAM-045,Cloud Infrastructure & SRE - Gamma #4,Cloud Infrastructure & SRE,EMP-000045,2025-12-01T00:00:00Z
+TEAM-046,Cybersecurity Operations - Delta #4,Cybersecurity Operations,EMP-000046,2025-12-01T00:00:00Z
+TEAM-047,Quality Assurance & Test Automation - Epsilon #4,Quality Assurance & Test Automation,EMP-000047,2025-12-01T00:00:00Z
+TEAM-048,Enterprise Systems & IT Ops - Zeta #4,Enterprise Systems & IT Ops,EMP-000048,2025-12-01T00:00:00Z
+TEAM-049,Mobile & Edge Computing - Core #4,Mobile & Edge Computing,EMP-000049,2025-12-01T00:00:00Z
+TEAM-050,Database Systems & Storage - Edge #4,Database Systems & Storage,EMP-000050,2025-12-01T00:00:00Z
+TEAM-051,Platform Engineering - Platform #4,Platform Engineering,EMP-000051,2025-12-01T00:00:00Z
+TEAM-052,Core Backend Services - Security Ops #4,Core Backend Services,EMP-000052,2025-12-01T00:00:00Z
+TEAM-053,Frontend & User Experience - SRE #4,Frontend & User Experience,EMP-000053,2025-12-01T00:00:00Z
+TEAM-054,Data Platform & AI - Analytics #4,Data Platform & AI,EMP-000054,2025-12-01T00:00:00Z
+TEAM-055,Cloud Infrastructure & SRE - Automation #4,Cloud Infrastructure & SRE,EMP-000055,2025-12-01T00:00:00Z
+TEAM-056,Cybersecurity Operations - Performance #4,Cybersecurity Operations,EMP-000056,2025-12-01T00:00:00Z
+TEAM-057,Quality Assurance & Test Automation - Alpha #5,Quality Assurance & Test Automation,EMP-000057,2025-12-01T00:00:00Z
+TEAM-058,Enterprise Systems & IT Ops - Beta #5,Enterprise Systems & IT Ops,EMP-000058,2025-12-01T00:00:00Z
+TEAM-059,Mobile & Edge Computing - Gamma #5,Mobile & Edge Computing,EMP-000059,2025-12-01T00:00:00Z
+TEAM-060,Database Systems & Storage - Delta #5,Database Systems & Storage,EMP-000060,2025-12-01T00:00:00Z
+TEAM-061,Platform Engineering - Epsilon #5,Platform Engineering,EMP-000061,2025-12-01T00:00:00Z
+TEAM-062,Core Backend Services - Zeta #5,Core Backend Services,EMP-000062,2025-12-01T00:00:00Z
+TEAM-063,Frontend & User Experience - Core #5,Frontend & User Experience,EMP-000063,2025-12-01T00:00:00Z
+TEAM-064,Data Platform & AI - Edge #5,Data Platform & AI,EMP-000064,2025-12-01T00:00:00Z
+TEAM-065,Cloud Infrastructure & SRE - Platform #5,Cloud Infrastructure & SRE,EMP-000065,2025-12-01T00:00:00Z
+TEAM-066,Cybersecurity Operations - Security Ops #5,Cybersecurity Operations,EMP-000066,2025-12-01T00:00:00Z
+TEAM-067,Quality Assurance & Test Automation - SRE #5,Quality Assurance & Test Automation,EMP-000067,2025-12-01T00:00:00Z
+TEAM-068,Enterprise Systems & IT Ops - Analytics #5,Enterprise Systems & IT Ops,EMP-000068,2025-12-01T00:00:00Z
+TEAM-069,Mobile & Edge Computing - Automation #5,Mobile & Edge Computing,EMP-000069,2025-12-01T00:00:00Z
+TEAM-070,Database Systems & Storage - Performance #5,Database Systems & Storage,EMP-000070,2025-12-01T00:00:00Z
+TEAM-071,Platform Engineering - Alpha #6,Platform Engineering,EMP-000071,2025-12-01T00:00:00Z
+TEAM-072,Core Backend Services - Beta #6,Core Backend Services,EMP-000072,2025-12-01T00:00:00Z
+TEAM-073,Frontend & User Experience - Gamma #6,Frontend & User Experience,EMP-000073,2025-12-01T00:00:00Z
+TEAM-074,Data Platform & AI - Delta #6,Data Platform & AI,EMP-000074,2025-12-01T00:00:00Z
+TEAM-075,Cloud Infrastructure & SRE - Epsilon #6,Cloud Infrastructure & SRE,EMP-000075,2025-12-01T00:00:00Z
+TEAM-076,Cybersecurity Operations - Zeta #6,Cybersecurity Operations,EMP-000076,2025-12-01T00:00:00Z
+TEAM-077,Quality Assurance & Test Automation - Core #6,Quality Assurance & Test Automation,EMP-000077,2025-12-01T00:00:00Z
+TEAM-078,Enterprise Systems & IT Ops - Edge #6,Enterprise Systems & IT Ops,EMP-000078,2025-12-01T00:00:00Z
+TEAM-079,Mobile & Edge Computing - Platform #6,Mobile & Edge Computing,EMP-000079,2025-12-01T00:00:00Z
+TEAM-080,Database Systems & Storage - Security Ops #6,Database Systems & Storage,EMP-000080,2025-12-01T00:00:00Z
+TEAM-081,Platform Engineering - SRE #6,Platform Engineering,EMP-000081,2025-12-01T00:00:00Z
+TEAM-082,Core Backend Services - Analytics #6,Core Backend Services,EMP-000082,2025-12-01T00:00:00Z
+TEAM-083,Frontend & User Experience - Automation #6,Frontend & User Experience,EMP-000083,2025-12-01T00:00:00Z
+TEAM-084,Data Platform & AI - Performance #6,Data Platform & AI,EMP-000084,2025-12-01T00:00:00Z
+TEAM-085,Cloud Infrastructure & SRE - Alpha #7,Cloud Infrastructure & SRE,EMP-000085,2025-12-01T00:00:00Z
+TEAM-086,Cybersecurity Operations - Beta #7,Cybersecurity Operations,EMP-000086,2025-12-01T00:00:00Z
+TEAM-087,Quality Assurance & Test Automation - Gamma #7,Quality Assurance & Test Automation,EMP-000087,2025-12-01T00:00:00Z
+TEAM-088,Enterprise Systems & IT Ops - Delta #7,Enterprise Systems & IT Ops,EMP-000088,2025-12-01T00:00:00Z
+TEAM-089,Mobile & Edge Computing - Epsilon #7,Mobile & Edge Computing,EMP-000089,2025-12-01T00:00:00Z
+TEAM-090,Database Systems & Storage - Zeta #7,Database Systems & Storage,EMP-000090,2025-12-01T00:00:00Z
+TEAM-091,Platform Engineering - Core #7,Platform Engineering,EMP-000091,2025-12-01T00:00:00Z
+TEAM-092,Core Backend Services - Edge #7,Core Backend Services,EMP-000092,2025-12-01T00:00:00Z
+TEAM-093,Frontend & User Experience - Platform #7,Frontend & User Experience,EMP-000093,2025-12-01T00:00:00Z
+TEAM-094,Data Platform & AI - Security Ops #7,Data Platform & AI,EMP-000094,2025-12-01T00:00:00Z
+TEAM-095,Cloud Infrastructure & SRE - SRE #7,Cloud Infrastructure & SRE,EMP-000095,2025-12-01T00:00:00Z
+TEAM-096,Cybersecurity Operations - Analytics #7,Cybersecurity Operations,EMP-000096,2025-12-01T00:00:00Z
+TEAM-097,Quality Assurance & Test Automation - Automation #7,Quality Assurance & Test Automation,EMP-000097,2025-12-01T00:00:00Z
+TEAM-098,Enterprise Systems & IT Ops - Performance #7,Enterprise Systems & IT Ops,EMP-000098,2025-12-01T00:00:00Z
+TEAM-099,Mobile & Edge Computing - Alpha #8,Mobile & Edge Computing,EMP-000099,2025-12-01T00:00:00Z
+TEAM-100,Database Systems & Storage - Beta #8,Database Systems & Storage,EMP-000100,2025-12-01T00:00:00Z

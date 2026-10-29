@@ -1,0 +1,4 @@
+template_id,shift_name,shift_code,start_time,end_time,duration_hours,is_overnight,active,created_at
+TMPL-01,Morning Operations,MORN,06:00:00,14:00:00,8.0,False,True,2025-12-01T00:00:00Z
+TMPL-02,Afternoon Operations,AFTN,14:00:00,22:00:00,8.0,False,True,2025-12-01T00:00:00Z
+TMPL-03,Night On-Call,NGHT,22:00:00,06:00:00,8.0,True,True,2025-12-01T00:00:00Z

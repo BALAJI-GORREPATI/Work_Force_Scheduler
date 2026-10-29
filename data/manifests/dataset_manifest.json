@@ -1,0 +1,115 @@
+{
+  "generator_version": "2.0.0",
+  "random_seed": 20261022,
+  "mode": "full",
+  "generated_at": "2026-10-29T07:03:47.926112Z",
+  "record_counts": {
+    "employees": 2000,
+    "teams": 100,
+    "skills": 60,
+    "employee_skills": 24471,
+    "shift_templates": 3,
+    "holiday_calendars": 4,
+    "shift_occurrences": 5400,
+    "coverage_requirements": 5400,
+    "leave_requests": 5000,
+    "shift_assignments": 5400,
+    "attendance_events": 10800,
+    "swap_requests": 30,
+    "schedule_runs": 1,
+    "audit_events": 30,
+    "anomaly_ground_truth": 5
+  },
+  "files": [
+    {
+      "table": "employees",
+      "record_count": 2000,
+      "csv_file": "employees.csv",
+      "sha256": "3c6d2bb60336f5c51c69dd21ccb7ffd1f804d01c9a816e327d5abe2bf5163fa0"
+    },
+    {
+      "table": "teams",
+      "record_count": 100,
+      "csv_file": "teams.csv",
+      "sha256": "fa5f2948686c6c7cd461a7457bd110ca5d4c54231c88cff2685f44ec854db524"
+    },
+    {
+      "table": "skills",
+      "record_count": 60,
+      "csv_file": "skills.csv",
+      "sha256": "dbb0f1019c03b347b233ff55d4656ba7cb336eb3e31bd640c8ec384ebcddc0e1"
+    },
+    {
+      "table": "employee_skills",
+      "record_count": 24471,
+      "csv_file": "employee_skills.csv",
+      "sha256": "6df422d0b3bf4e026c7a1144c06e11ee676381c400d5760b7541ef0b902d4062"
+    },
+    {
+      "table": "shift_templates",
+      "record_count": 3,
+      "csv_file": "shift_templates.csv",
+      "sha256": "5abb81ab92b447ebf048df7531435e9038f9f0501facdbd70eda5eeb7a16ddda"
+    },
+    {
+      "table": "holiday_calendars",
+      "record_count": 4,
+      "csv_file": "holiday_calendars.csv",
+      "sha256": "dbbbb1cda349330190e75c44213555ea032ef7c655a0ce9cd1138faf1cc7a180"
+    },
+    {
+      "table": "shift_occurrences",
+      "record_count": 5400,
+      "csv_file": "shift_occurrences.csv",
+      "sha256": "18be192fe02fec80d9677729dd4f8321260cda2fbdef1fe9daf1558324b63a47"
+    },
+    {
+      "table": "coverage_requirements",
+      "record_count": 5400,
+      "csv_file": "coverage_requirements.csv",
+      "sha256": "a293c6e58fddfd126705446bd869c84478d05912994ad3a8796ab67daec2521f"
+    },
+    {
+      "table": "leave_requests",
+      "record_count": 5000,
+      "csv_file": "leave_requests.csv",
+      "sha256": "15554ddc1f100d72b808011aaeff82c8f3eaa47d1b52f9da204dea1e659b2314"
+    },
+    {
+      "table": "shift_assignments",
+      "record_count": 5400,
+      "csv_file": "shift_assignments.csv",
+      "sha256": "1ddc2c19713a74910b51e72a5fbbbf65b540853025051fe686ec00bd0f5b249d"
+    },
+    {
+      "table": "attendance_events",
+      "record_count": 10800,
+      "csv_file": "attendance_events.csv",
+      "sha256": "c28a5138a90ef37f0640f0be92f54ebfce71167d04e07aba94cdeeba70835ba8"
+    },
+    {
+      "table": "swap_requests",
+      "record_count": 30,
+      "csv_file": "swap_requests.csv",
+      "sha256": "ab55e6190c5da18bcefe5e52f5ffdc5a122e45219e0238939e566807de31783f"
+    },
+    {
+      "table": "schedule_runs",
+      "record_count": 1,
+      "csv_file": "schedule_runs.csv",
+      "sha256": "f4c50a3def7faa3d3b64d786c26a2192e193ce1f1ac4b23af0acf50910dbc569"
+    },
+    {
+      "table": "audit_events",
+      "record_count": 30,
+      "csv_file": "audit_events.csv",
+      "sha256": "09c2b4025acdbb817cb87af31d23d4ebce5d45306aaed19536220da7ad99b8f6"
+    },
+    {
+      "table": "anomaly_ground_truth",
+      "record_count": 5,
+      "csv_file": "ground_truth.csv",
+      "sha256": "624a4e929369db8785050ea78f0c2f2f1ac854b9dc5826375b8f9d66fee3dbf7"
+    }
+  ]
+}
