@@ -141,3 +141,4 @@ USING (get_current_user_role() IN ('ADMIN', 'HR_PARTNER', 'MANAGER'));
 
 CREATE POLICY "Allow system to insert audit events" ON audit_events FOR INSERT TO authenticated 
 WITH CHECK (true);
+

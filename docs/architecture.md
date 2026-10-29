@@ -115,3 +115,4 @@ To ensure rigorous validation of the constraint engine, five explicit anomalies 
 | Manage Skills & Demand | - | - | - | Full | Full |
 | View Compliance & Audits | - | Read | Full | Full | Full |
 | Run Anomaly Benchmarks | - | - | - | Read | Full |
+

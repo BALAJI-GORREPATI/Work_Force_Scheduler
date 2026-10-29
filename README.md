@@ -194,3 +194,4 @@ The application features a demo persona switcher to test real role-based permiss
 ## 9. License
 
 MIT License. Designed and engineered for scalable, reproducible enterprise workforce operations.
+

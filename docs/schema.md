@@ -82,3 +82,4 @@ erDiagram
 6. **Swap Workflow Progression**:
    - State transition graph: `PENDING_PEER` -> `PENDING_MANAGER` -> `APPROVED` -> `APPLIED`.
    - Applying an unapproved swap directly violates state lifecycle integrity.
+

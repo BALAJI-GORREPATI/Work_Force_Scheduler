@@ -116,3 +116,4 @@ npm install
 npm run dev
 # The application will launch at http://localhost:5173
 ```
+

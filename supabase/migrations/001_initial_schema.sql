@@ -255,3 +255,4 @@ CREATE INDEX IF NOT EXISTS idx_cov_shift ON coverage_requirements(shift_id);
 CREATE INDEX IF NOT EXISTS idx_att_emp_time ON attendance_events(employee_id, event_timestamp);
 CREATE INDEX IF NOT EXISTS idx_swap_status ON swap_requests(status);
 CREATE INDEX IF NOT EXISTS idx_audit_target ON audit_events(target_entity, target_id);
+

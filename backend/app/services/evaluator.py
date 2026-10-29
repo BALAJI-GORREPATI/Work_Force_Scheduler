@@ -124,3 +124,4 @@ class AnomalyEvaluator:
             "workload_std_deviation": round(std_dev, 2),
             "workforce_fairness_cv": round(cv, 4) # Lower is more fair
         }
+

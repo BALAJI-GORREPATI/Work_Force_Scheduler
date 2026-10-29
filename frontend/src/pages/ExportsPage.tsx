@@ -36,7 +36,6 @@ export const ExportsPage: React.FC = () => {
     { name: 'attendance_events', title: 'Attendance Events', desc: 'Clock punches & reconciled hours' },
     { name: 'swap_requests', title: 'Swap Requests', desc: 'Shift exchange requests & approval state' },
     { name: 'schedule_runs', title: 'Schedule Runs', desc: 'Solver runs and coverage statistics' },
-    { name: 'audit_events', title: 'Audit Events', desc: 'Decision traceability and state transitions' },
     { name: 'ground_truth', title: 'Anomaly Ground Truth', desc: 'Decoupled benchmark ground-truth labels' },
   ];
 
@@ -179,3 +178,4 @@ export const ExportsPage: React.FC = () => {
     </div>
   );
 };
+

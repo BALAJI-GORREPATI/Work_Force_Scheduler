@@ -322,3 +322,4 @@ Maps Supabase Authentication `auth.users` to workforce identities and RBAC roles
 5. **Workforce Fairness Metric (Workload Variance / Coefficient of Variation)**:
    $$CV = \frac{\sigma_{\text{hours}}}{\mu_{\text{hours}}}$$
    Measures equitable hour distribution across team members. A lower value signifies higher schedule fairness.
+

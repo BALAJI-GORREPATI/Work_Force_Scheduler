@@ -275,3 +275,4 @@ class AuditEvent(BaseModel):
     new_state: str
     timestamp: str
     metadata: Optional[Dict[str, Any]] = None
+

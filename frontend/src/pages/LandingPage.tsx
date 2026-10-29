@@ -18,7 +18,7 @@ export const LandingPage: React.FC = () => {
           <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-teal-400 flex items-center justify-center shadow-lg shadow-indigo-500/20">
             <Sparkles className="w-5 h-5 text-white" />
           </div>
-          <span className="font-bold text-xl tracking-tight text-white">WorkForce Scheduler <span className="text-xs px-2 py-0.5 rounded-full bg-indigo-500/20 text-indigo-400 border border-indigo-500/30">2.0</span></span>
+          <span className="font-bold text-xl tracking-tight text-white">WorkForce Scheduler</span>
         </div>
 
         <div className="flex items-center gap-4">
@@ -178,7 +178,7 @@ export const LandingPage: React.FC = () => {
       {/* Footer */}
       <footer className="mt-auto border-t border-slate-800/80 py-8 px-6 lg:px-16 text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-4">
         <div>
-          Workforce Scheduler 2.0 &bull; Netlify &amp; Supabase PostgreSQL Integration
+          Workforce Scheduler &bull; Netlify &amp; Supabase PostgreSQL Integration
         </div>
         <div className="flex items-center gap-6">
           <Link to="/docs" className="hover:text-slate-300 transition-colors">Documentation</Link>
@@ -189,3 +189,4 @@ export const LandingPage: React.FC = () => {
     </div>
   );
 };
+

@@ -256,3 +256,4 @@ export const OptimizerPage: React.FC = () => {
     </div>
   );
 };
+

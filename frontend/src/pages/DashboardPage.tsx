@@ -4,8 +4,8 @@ import { dataService } from '../services/dataService';
 import { useAuth } from '../context/AuthContext';
 import { 
   Users, Network, Calendar, CalendarOff, 
-  CheckCircle2, AlertTriangle, Cpu, TrendingUp,
-  ArrowUpRight, ShieldCheck, Clock, ExternalLink
+  CheckCircle2, AlertTriangle, TrendingUp,
+  ArrowUpRight, ShieldCheck, Clock, ExternalLink, Download
 } from 'lucide-react';
 import { 
   ResponsiveContainer, BarChart, Bar, XAxis, YAxis, 
@@ -154,18 +154,18 @@ export const DashboardPage: React.FC = () => {
 
         <div className="flex items-center gap-3">
           <Link
-            to="/optimizer"
+            to="/schedule"
             className="px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold shadow-md shadow-indigo-600/30 transition-all flex items-center gap-2"
           >
-            <Cpu className="w-3.5 h-3.5" />
-            <span>Schedule Optimizer</span>
+            <Calendar className="w-3.5 h-3.5" />
+            <span>Schedule Planner</span>
           </Link>
           <Link
-            to="/validation"
+            to="/exports"
             className="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold border border-slate-700 transition-all flex items-center gap-2"
           >
-            <AlertTriangle className="w-3.5 h-3.5 text-amber-400" />
-            <span>Audit Anomalies</span>
+            <Download className="w-3.5 h-3.5 text-indigo-400" />
+            <span>Data Exports</span>
           </Link>
         </div>
       </div>
@@ -337,8 +337,8 @@ export const DashboardPage: React.FC = () => {
               <h2 className="text-sm font-bold text-white">Injected Anomaly Benchmark Evaluation</h2>
               <p className="text-[11px] text-slate-400">Detection accuracy against decoupled ground-truth scenarios</p>
             </div>
-            <Link to="/validation" className="text-xs text-indigo-400 hover:text-indigo-300 flex items-center gap-1">
-              <span>Benchmark Details</span>
+            <Link to="/exports" className="text-xs text-indigo-400 hover:text-indigo-300 flex items-center gap-1">
+              <span>Benchmark Reports</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
             </Link>
           </div>
@@ -367,8 +367,8 @@ export const DashboardPage: React.FC = () => {
             <h2 className="text-sm font-bold text-white">Recent System Decisions &amp; Traceability Feed</h2>
             <p className="text-[11px] text-slate-400">Immutable audit log of leave approvals, swaps, and schedule optimization</p>
           </div>
-          <Link to="/audit" className="text-xs text-indigo-400 hover:text-indigo-300 flex items-center gap-1">
-            <span>Full Audit Trail</span>
+          <Link to="/exports" className="text-xs text-indigo-400 hover:text-indigo-300 flex items-center gap-1">
+            <span>Audit Data</span>
             <ArrowUpRight className="w-3.5 h-3.5" />
           </Link>
         </div>
@@ -402,3 +402,4 @@ export const DashboardPage: React.FC = () => {
     </div>
   );
 };
+

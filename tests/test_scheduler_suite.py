@@ -100,3 +100,4 @@ def test_scheduling_engine_hard_constraints(starter_dataset):
     assert "coverage_gaps" in result
     assert "run_summary" in result
     assert result["run_summary"]["coverage_rate"] > 0
+
