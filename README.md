@@ -19,7 +19,6 @@
 | :--- | :--- | :---: |
 | **Live Production Web App** | [https://workforce-scheduler-balaji.netlify.app](https://workforce-scheduler-balaji.netlify.app) | **Live (HTTP 200)** |
 | **GitHub Source Repository** | [https://github.com/BALAJI-GORREPATI/Work_Force_Scheduler](https://github.com/BALAJI-GORREPATI/Work_Force_Scheduler) | **Synchronized (`main`)** |
-| **Supabase Cloud Database** | [https://kjjrhgfmkbjrexzwhgyt.supabase.co](https://kjjrhgfmkbjrexzwhgyt.supabase.co) | **Connected & Active** |
 
 ---
 
@@ -39,18 +38,18 @@ Organizations require dynamic workforce schedules that reconcile:
 
 ## 2. Key Features & Live Database Capabilities
 
-### 2.1 Interactive Employee Directory & Mutation Engine
+### Interactive Employee Directory & Mutation Engine
 - **Add Employee**: Create new IT engineering personnel with automatic ID generation (`EMP-XXXXXX`), instant validation, and direct persistence to Supabase without duplicate records.
 - **Edit Employee**: Live modal dialog allowing operators to update an employee's first name, last name, primary squad, IT job role, employment status, contract type, and weekly working hours. Changes execute an immediate SQL `UPDATE` against the live database.
 - **Soft Deactivation & Reactivation**: Toggle an employee's status to `TERMINATED` (inactive) or `ACTIVE` with one click. Preserves 100% of historical shift assignments, punches, and schedule logs without data deletion.
 - **Skill Competency Management**: Assign and remove competencies from the 60 curated IT skills taxonomy with granular proficiency ratings (`BEGINNER`, `INTERMEDIATE`, `ADVANCED`, `EXPERT`) and years of experience, synchronized in real time to the `employee_skills` table.
 
-### 2.2 End-to-End Leave Lifecycle & Persistence
+### End-to-End Leave Lifecycle & Persistence
 - **Approve / Reject Workflow**: Operations managers can review, approve, or reject leave requests across 5,000+ records.
 - **Permanent Cloud Sync**: Status transitions (`APPROVED` / `REJECTED`) are committed directly to Supabase with approver attribution and decision timestamps, permanently persisting across browser page reloads.
 - **Self-Approval Guard**: Built-in authorization constraint prevents employees from approving their own time-off requests.
 
-### 2.3 High-Concurrency Data Hydration
+### High-Concurrency Data Hydration
 - **PostgREST Range Pagination**: Overcomes default 1,000-row query limits by executing parallel range queries (`range(0, 999)`, `range(1000, 1999)`, etc.) to load 2,000+ employees and 5,000+ leave records seamlessly on app hydration.
 - **Optimistic State Management**: Instant UI feedback on mutations backed by reliable cloud database synchronization.
 
@@ -153,11 +152,11 @@ WorkForce_Scheduler/
 
 ## 6. Quickstart & Local Development
 
-### 6.1 Prerequisites
+### Prerequisites
 - Python 3.10+
 - Node.js v20+ and npm
 
-### 6.2 Python Engine Setup & Data Generation
+### Python Engine Setup & Data Generation
 ```bash
 # 1. Install dependencies
 pip install -r requirements.txt
@@ -172,7 +171,7 @@ python scripts/reproducibility_test.py
 pytest tests/ -v
 ```
 
-### 6.3 Frontend Single-Page Application Setup
+### Frontend Single-Page Application Setup
 ```bash
 # 1. Navigate to frontend
 cd frontend
