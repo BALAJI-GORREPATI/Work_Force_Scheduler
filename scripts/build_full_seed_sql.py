@@ -56,3 +56,4 @@ with open(out_sql, "w", encoding="utf-8") as f:
         f.write(",\n".join(e_rows) + "\nON CONFLICT (employee_id) DO NOTHING;\n\n")
 
 print(f"Generated seed.sql ({os.path.getsize(out_sql):,} bytes) with all 2,000 employees, 100 teams, 60 skills!")
+

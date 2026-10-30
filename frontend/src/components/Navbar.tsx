@@ -1,12 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
 import { 
-  ShieldCheck, Database, Sparkles 
+  ShieldCheck, Sparkles 
 } from 'lucide-react';
 
 export const Navbar: React.FC = () => {
-  const { isConfigured } = useAuth();
 
   return (
     <header className="sticky top-0 z-40 bg-slate-900/80 backdrop-blur-md border-b border-slate-800 px-4 lg:px-8 py-3 flex items-center justify-between">
@@ -27,12 +25,6 @@ export const Navbar: React.FC = () => {
 
       {/* Middle Status Indicators */}
       <div className="flex items-center gap-4 text-xs">
-        <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-800/60 border border-slate-700/60 text-slate-300">
-          <Database className={`w-3.5 h-3.5 ${isConfigured ? 'text-emerald-400' : 'text-cyan-400'}`} />
-          <span>Storage: <strong className="text-white">{isConfigured ? 'Supabase PostgreSQL' : 'Local / Synthetic Mode'}</strong></span>
-          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-        </div>
-
         <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800/60 border border-slate-700/60 text-slate-300">
           <ShieldCheck className="w-3.5 h-3.5 text-indigo-400" />
           <span>Seed: <code className="text-indigo-300 font-mono">20261022</code></span>

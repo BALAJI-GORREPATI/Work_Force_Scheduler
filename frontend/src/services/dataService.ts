@@ -4,6 +4,7 @@ import {
   CoverageRequirement, SwapRequest, ValidationIssue, AnomalyGroundTruth, 
   AuditEvent, EvaluationBenchmark 
 } from '../types';
+import { supabase, isSupabaseConfigured } from '../lib/supabase';
 
 class DataService {
   private cache: { [key: string]: any[] } = {};
@@ -64,14 +65,75 @@ class DataService {
           fetchJson('schedule_runs').catch(() => []),
         ]);
 
-        this.state.employees = employees;
-        this.state.teams = teams;
-        this.state.skills = skills;
-        this.state.employeeSkills = employeeSkills;
+        // If Supabase is configured, fetch live database records directly
+        if (isSupabaseConfigured) {
+          try {
+            // Supabase PostgREST default limit is 1,000. Fetch in parallel ranges to load all 2,000+ employees
+            const [p1, p2, p3] = await Promise.all([
+              supabase.from('employees').select('*').range(0, 999).order('created_at', { ascending: false }),
+              supabase.from('employees').select('*').range(1000, 1999).order('created_at', { ascending: false }),
+              supabase.from('employees').select('*').range(2000, 2999).order('created_at', { ascending: false })
+            ]);
+            const allDbEmps = [
+              ...(p1.data || []),
+              ...(p2.data || []),
+              ...(p3.data || [])
+            ] as Employee[];
+
+            if (allDbEmps.length > 0) {
+              this.state.employees = allDbEmps;
+            } else {
+              this.state.employees = employees;
+            }
+
+            // Supabase PostgREST default limit is 1,000. Fetch leaves across ranges to load all live leave requests
+            const [l1, l2, l3, l4, l5] = await Promise.all([
+              supabase.from('leave_requests').select('*').range(0, 999).order('request_timestamp', { ascending: false }),
+              supabase.from('leave_requests').select('*').range(1000, 1999).order('request_timestamp', { ascending: false }),
+              supabase.from('leave_requests').select('*').range(2000, 2999).order('request_timestamp', { ascending: false }),
+              supabase.from('leave_requests').select('*').range(3000, 3999).order('request_timestamp', { ascending: false }),
+              supabase.from('leave_requests').select('*').range(4000, 4999).order('request_timestamp', { ascending: false })
+            ]);
+            const allDbLeaves = [
+              ...(l1.data || []),
+              ...(l2.data || []),
+              ...(l3.data || []),
+              ...(l4.data || []),
+              ...(l5.data || [])
+            ] as LeaveRequest[];
+
+            if (allDbLeaves.length > 0) {
+              this.state.leaveRequests = allDbLeaves;
+            } else {
+              this.state.leaveRequests = leaveRequests;
+            }
+
+            const { data: dbSkills } = await supabase.from('skills').select('*');
+            this.state.skills = (dbSkills && dbSkills.length > 0) ? (dbSkills as Skill[]) : skills;
+
+            const { data: dbTeams } = await supabase.from('teams').select('*');
+            this.state.teams = (dbTeams && dbTeams.length > 0) ? (dbTeams as Team[]) : teams;
+
+            const { data: dbEmpSkills } = await supabase.from('employee_skills').select('*').limit(2000);
+            this.state.employeeSkills = (dbEmpSkills && dbEmpSkills.length > 0) ? (dbEmpSkills as EmployeeSkill[]) : employeeSkills;
+          } catch (dbErr) {
+            console.warn('Initial Supabase fetch error, using bundled datasets:', dbErr);
+            this.state.employees = employees;
+            this.state.teams = teams;
+            this.state.skills = skills;
+            this.state.employeeSkills = employeeSkills;
+            this.state.leaveRequests = leaveRequests;
+          }
+        } else {
+          this.state.employees = employees;
+          this.state.teams = teams;
+          this.state.skills = skills;
+          this.state.employeeSkills = employeeSkills;
+          this.state.leaveRequests = leaveRequests;
+        }
         this.state.shiftTemplates = shiftTemplates;
         this.state.shiftOccurrences = shiftOccurrences;
         this.state.shiftAssignments = shiftAssignments;
-        this.state.leaveRequests = leaveRequests;
         this.state.attendanceEvents = attendanceEvents;
         this.state.coverageRequirements = coverageRequirements;
         this.state.swapRequests = swapRequests;
@@ -113,8 +175,132 @@ class DataService {
       created_at: new Date().toISOString(),
       updated_at: new Date().toISOString()
     };
-    this.state.employees.unshift(newEmployee);
+
+    // 1. Save directly to Supabase if configured
+    if (isSupabaseConfigured) {
+      try {
+        const { data, error } = await supabase
+          .from('employees')
+          .insert([newEmployee])
+          .select();
+        if (error) {
+          console.error('Supabase employee insert error:', error);
+        } else if (data && data[0]) {
+          const inserted = data[0] as Employee;
+          if (!this.state.employees.some(e => e.employee_id === inserted.employee_id)) {
+            this.state.employees.unshift(inserted);
+          }
+          return inserted;
+        }
+      } catch (e) {
+        console.error('Failed to insert employee into Supabase:', e);
+      }
+    }
+
+    // 2. Fallback to state
+    if (!this.state.employees.some(e => e.employee_id === newEmployee.employee_id)) {
+      this.state.employees.unshift(newEmployee);
+    }
     return newEmployee;
+  }
+
+  async updateEmployee(employeeId: string, updates: Partial<Employee>): Promise<Employee | null> {
+    await this.initialize();
+    const idx = this.state.employees.findIndex(e => e.employee_id === employeeId);
+    if (idx === -1) return null;
+
+    const updatedEmployee: Employee = {
+      ...this.state.employees[idx],
+      ...updates,
+      updated_at: new Date().toISOString()
+    };
+
+    if (isSupabaseConfigured) {
+      try {
+        const { data, error } = await supabase
+          .from('employees')
+          .update({
+            first_name: updatedEmployee.first_name,
+            last_name: updatedEmployee.last_name,
+            primary_team_id: updatedEmployee.primary_team_id,
+            it_job_role: updatedEmployee.it_job_role,
+            employment_status: updatedEmployee.employment_status,
+            employment_type: updatedEmployee.employment_type,
+            weekly_max_hours: updatedEmployee.weekly_max_hours,
+            overtime_cap_hours: updatedEmployee.overtime_cap_hours,
+            updated_at: updatedEmployee.updated_at
+          })
+          .eq('employee_id', employeeId)
+          .select();
+        if (error) {
+          console.error('Supabase employee update error:', error);
+        } else if (data && data[0]) {
+          this.state.employees[idx] = data[0] as Employee;
+          return data[0] as Employee;
+        }
+      } catch (e) {
+        console.error('Failed to update employee in Supabase:', e);
+      }
+    }
+
+    this.state.employees[idx] = updatedEmployee;
+    return updatedEmployee;
+  }
+
+  async setEmployeeStatus(employeeId: string, status: 'ACTIVE' | 'ON_LEAVE' | 'TERMINATED'): Promise<boolean> {
+    const updated = await this.updateEmployee(employeeId, { employment_status: status });
+    return updated !== null;
+  }
+
+  async addEmployeeSkill(employeeId: string, skillId: string, proficiencyLevel: 'BEGINNER' | 'INTERMEDIATE' | 'ADVANCED' | 'EXPERT', yearsExperience: number = 1.0): Promise<EmployeeSkill | null> {
+    await this.initialize();
+    const newSkillId = `ESK-${employeeId}-${skillId}`;
+    const newRecord: EmployeeSkill = {
+      employee_skill_id: newSkillId,
+      employee_id: employeeId,
+      skill_id: skillId,
+      proficiency_level: proficiencyLevel,
+      years_experience: yearsExperience,
+      certified: true,
+      created_at: new Date().toISOString()
+    };
+
+    if (isSupabaseConfigured) {
+      try {
+        const { data, error } = await supabase
+          .from('employee_skills')
+          .insert([newRecord])
+          .select();
+        if (error) {
+          console.error('Supabase employee_skills insert error:', error);
+        } else if (data && data[0]) {
+          const inserted = data[0] as EmployeeSkill;
+          this.state.employeeSkills.push(inserted);
+          return inserted;
+        }
+      } catch (e) {
+        console.error('Failed to insert employee_skill in Supabase:', e);
+      }
+    }
+
+    this.state.employeeSkills.push(newRecord);
+    return newRecord;
+  }
+
+  async removeEmployeeSkill(employeeSkillId: string): Promise<boolean> {
+    await this.initialize();
+    if (isSupabaseConfigured) {
+      try {
+        await supabase
+          .from('employee_skills')
+          .delete()
+          .eq('employee_skill_id', employeeSkillId);
+      } catch (e) {
+        console.error('Failed to delete employee_skill in Supabase:', e);
+      }
+    }
+    this.state.employeeSkills = this.state.employeeSkills.filter(es => es.employee_skill_id !== employeeSkillId);
+    return true;
   }
 
   // --- Teams & Skills ---
@@ -182,9 +368,26 @@ class DataService {
       decision_timestamp: null,
       decision_notes: null
     };
-    this.state.leaveRequests.unshift(newLeave);
 
-    // Audit Event
+    if (isSupabaseConfigured) {
+      try {
+        const { data, error } = await supabase
+          .from('leave_requests')
+          .insert([newLeave])
+          .select();
+        if (error) {
+          console.error('Supabase leave insert error:', error);
+        } else if (data && data[0]) {
+          this.state.leaveRequests.unshift(data[0] as LeaveRequest);
+          this.logAuditEvent(req.employee_id, 'LEAVE_REQUEST', 'leave_requests', newId, null, 'PENDING');
+          return data[0] as LeaveRequest;
+        }
+      } catch (e) {
+        console.error('Failed to insert leave into Supabase:', e);
+      }
+    }
+
+    this.state.leaveRequests.unshift(newLeave);
     this.logAuditEvent(req.employee_id, 'LEAVE_REQUEST', 'leave_requests', newId, null, 'PENDING');
     return newLeave;
   }
@@ -209,6 +412,22 @@ class DataService {
     lve.approver_employee_id = approverId;
     lve.decision_timestamp = new Date().toISOString();
     lve.decision_notes = notes;
+
+    if (isSupabaseConfigured) {
+      try {
+        await supabase
+          .from('leave_requests')
+          .update({
+            status,
+            approver_employee_id: approverId,
+            decision_timestamp: lve.decision_timestamp,
+            decision_notes: notes
+          })
+          .eq('leave_id', leaveId);
+      } catch (e) {
+        console.error('Failed to update leave in Supabase:', e);
+      }
+    }
 
     this.logAuditEvent(approverId, 'LEAVE_DECISION', 'leave_requests', leaveId, prevState, status);
     return true;

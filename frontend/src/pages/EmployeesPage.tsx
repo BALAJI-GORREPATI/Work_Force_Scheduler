@@ -3,7 +3,8 @@ import { dataService } from '../services/dataService';
 import { Employee, Team, EmployeeSkill, Skill } from '../types';
 import { 
   Users, Search, Filter, ChevronLeft, ChevronRight, 
-  X, Check, Plus, Award, Mail, Calendar, Briefcase, Clock
+  X, Check, Plus, Award, Mail, Calendar, Briefcase, Clock,
+  Edit2, UserX, UserCheck, Trash2
 } from 'lucide-react';
 
 export const EmployeesPage: React.FC = () => {
@@ -26,6 +27,22 @@ export const EmployeesPage: React.FC = () => {
   // Modal State
   const [selectedEmployee, setSelectedEmployee] = useState<Employee | null>(null);
   const [showAddModal, setShowAddModal] = useState(false);
+  const [editingEmployee, setEditingEmployee] = useState<Employee | null>(null);
+  const [editForm, setEditForm] = useState({
+    first_name: '',
+    last_name: '',
+    primary_team_id: '',
+    it_job_role: '',
+    employment_status: 'ACTIVE' as 'ACTIVE' | 'ON_LEAVE' | 'TERMINATED',
+    employment_type: 'FULL_TIME' as 'FULL_TIME' | 'PART_TIME' | 'CONTRACTOR',
+    weekly_max_hours: 40.0,
+    overtime_cap_hours: 8.0,
+  });
+
+  // Add Skill state for selected employee
+  const [newSkillId, setNewSkillId] = useState('');
+  const [newProficiency, setNewProficiency] = useState<'BEGINNER' | 'INTERMEDIATE' | 'ADVANCED' | 'EXPERT'>('INTERMEDIATE');
+
   const [newEmpForm, setNewEmpForm] = useState({
     first_name: '',
     last_name: '',
@@ -100,7 +117,7 @@ export const EmployeesPage: React.FC = () => {
   const handleCreateEmployee = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!newEmpForm.first_name || !newEmpForm.last_name) return;
-    const added = await dataService.addEmployee({
+    await dataService.addEmployee({
       first_name: newEmpForm.first_name,
       last_name: newEmpForm.last_name,
       primary_team_id: newEmpForm.primary_team_id,
@@ -109,9 +126,70 @@ export const EmployeesPage: React.FC = () => {
       employment_type: 'FULL_TIME',
       hire_date: new Date().toISOString().split('T')[0]
     });
-    setEmployees([added, ...employees]);
+    const refreshed = await dataService.getEmployees();
+    setEmployees(refreshed);
     setShowAddModal(false);
     setNewEmpForm({ first_name: '', last_name: '', primary_team_id: 'TEAM-001', it_job_role: 'Senior Backend Engineer' });
+  };
+
+  const openEditModal = (emp: Employee) => {
+    setEditingEmployee(emp);
+    setEditForm({
+      first_name: emp.first_name,
+      last_name: emp.last_name,
+      primary_team_id: emp.primary_team_id,
+      it_job_role: emp.it_job_role,
+      employment_status: emp.employment_status,
+      employment_type: emp.employment_type,
+      weekly_max_hours: emp.weekly_max_hours,
+      overtime_cap_hours: emp.overtime_cap_hours,
+    });
+  };
+
+  const handleUpdateEmployee = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!editingEmployee) return;
+    const updated = await dataService.updateEmployee(editingEmployee.employee_id, editForm);
+    if (updated) {
+      setEmployees(prev => prev.map(emp => emp.employee_id === updated.employee_id ? updated : emp));
+      if (selectedEmployee && selectedEmployee.employee_id === updated.employee_id) {
+        setSelectedEmployee(updated);
+      }
+    }
+    setEditingEmployee(null);
+  };
+
+  const handleToggleDeactivate = async (emp: Employee) => {
+    const newStatus = emp.employment_status === 'ACTIVE' ? 'TERMINATED' : 'ACTIVE';
+    const confirmMsg = newStatus === 'TERMINATED' 
+      ? `Are you sure you want to deactivate ${emp.first_name} ${emp.last_name}? (Historical schedules and punch records will be preserved).` 
+      : `Reactivate ${emp.first_name} ${emp.last_name}?`;
+    
+    if (!window.confirm(confirmMsg)) return;
+
+    const ok = await dataService.setEmployeeStatus(emp.employee_id, newStatus);
+    if (ok) {
+      setEmployees(prev => prev.map(e => e.employee_id === emp.employee_id ? { ...e, employment_status: newStatus } : e));
+      if (selectedEmployee && selectedEmployee.employee_id === emp.employee_id) {
+        setSelectedEmployee({ ...selectedEmployee, employment_status: newStatus });
+      }
+    }
+  };
+
+  const handleAddSkillToEmployee = async () => {
+    if (!selectedEmployee || !newSkillId) return;
+    const res = await dataService.addEmployeeSkill(selectedEmployee.employee_id, newSkillId, newProficiency);
+    if (res) {
+      setEmployeeSkills(prev => [...prev, res]);
+      setNewSkillId('');
+    }
+  };
+
+  const handleRemoveSkillFromEmployee = async (employeeSkillId: string) => {
+    const ok = await dataService.removeEmployeeSkill(employeeSkillId);
+    if (ok) {
+      setEmployeeSkills(prev => prev.filter(es => es.employee_skill_id !== employeeSkillId));
+    }
   };
 
   const profColors: Record<string, string> = {
@@ -249,12 +327,37 @@ export const EmployeesPage: React.FC = () => {
                       {emp.weekly_max_hours}h (+{emp.overtime_cap_hours}h OT)
                     </td>
                     <td className="py-3 px-4 text-right">
-                      <button
-                        onClick={() => setSelectedEmployee(emp)}
-                        className="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-indigo-400 hover:text-indigo-300 border border-slate-700 text-[11px] transition-colors"
-                      >
-                        Inspect Skills
-                      </button>
+                      <div className="flex items-center justify-end gap-1.5">
+                        <button
+                          onClick={() => setSelectedEmployee(emp)}
+                          className="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-indigo-400 hover:text-indigo-300 border border-slate-700 text-[11px] transition-colors"
+                          title="View profile & skills"
+                        >
+                          Skills
+                        </button>
+                        <button
+                          onClick={() => openEditModal(emp)}
+                          className="p-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white border border-slate-700 transition-colors"
+                          title="Edit employee details & team"
+                        >
+                          <Edit2 className="w-3.5 h-3.5" />
+                        </button>
+                        <button
+                          onClick={() => handleToggleDeactivate(emp)}
+                          className={`p-1 rounded-lg border transition-colors ${
+                            emp.employment_status === 'ACTIVE'
+                              ? 'bg-rose-500/10 hover:bg-rose-500/20 text-rose-400 border-rose-500/30'
+                              : 'bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 border-emerald-500/30'
+                          }`}
+                          title={emp.employment_status === 'ACTIVE' ? 'Deactivate employee' : 'Reactivate employee'}
+                        >
+                          {emp.employment_status === 'ACTIVE' ? (
+                            <UserX className="w-3.5 h-3.5" />
+                          ) : (
+                            <UserCheck className="w-3.5 h-3.5" />
+                          )}
+                        </button>
+                      </div>
                     </td>
                   </tr>
                 ))
@@ -356,7 +459,44 @@ export const EmployeesPage: React.FC = () => {
                 <span>Certified IT Skills Matrix ({selectedEmpSkills.length} competencies)</span>
               </h3>
               
-              <div className="grid sm:grid-cols-2 gap-3">
+              {/* Add Skill to Employee Section */}
+              <div className="mt-4 p-3 rounded-xl bg-slate-800/60 border border-slate-700/60">
+                <h4 className="text-xs font-semibold text-white mb-2">Add Competency to Employee</h4>
+                <div className="flex flex-col sm:flex-row gap-2">
+                  <select
+                    value={newSkillId}
+                    onChange={e => setNewSkillId(e.target.value)}
+                    className="flex-1 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-700 text-white text-xs focus:outline-none focus:border-indigo-500"
+                  >
+                    <option value="">Select an IT Skill...</option>
+                    {skills.map(s => (
+                      <option key={s.skill_id} value={s.skill_id}>
+                        {s.skill_name} ({s.category})
+                      </option>
+                    ))}
+                  </select>
+                  <select
+                    value={newProficiency}
+                    onChange={e => setNewProficiency(e.target.value as any)}
+                    className="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-700 text-white text-xs focus:outline-none focus:border-indigo-500"
+                  >
+                    <option value="BEGINNER">BEGINNER</option>
+                    <option value="INTERMEDIATE">INTERMEDIATE</option>
+                    <option value="ADVANCED">ADVANCED</option>
+                    <option value="EXPERT">EXPERT</option>
+                  </select>
+                  <button
+                    onClick={handleAddSkillToEmployee}
+                    disabled={!newSkillId}
+                    className="px-4 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 disabled:opacity-40 text-white text-xs font-semibold transition-colors flex items-center justify-center gap-1.5"
+                  >
+                    <Plus className="w-3.5 h-3.5" />
+                    <span>Assign Skill</span>
+                  </button>
+                </div>
+              </div>
+
+              <div className="grid sm:grid-cols-2 gap-3 mt-3">
                 {selectedEmpSkills.map(es => (
                   <div key={es.employee_skill_id} className="p-3 rounded-xl bg-slate-800/40 border border-slate-700/60 flex items-center justify-between text-xs">
                     <div>
@@ -367,11 +507,151 @@ export const EmployeesPage: React.FC = () => {
                       <span className={`text-[10px] px-2 py-0.5 rounded font-mono font-medium border ${profColors[es.proficiency_level] || 'bg-slate-700'}`}>
                         {es.proficiency_level}
                       </span>
+                      <button
+                        onClick={() => handleRemoveSkillFromEmployee(es.employee_skill_id)}
+                        className="p-1 rounded text-slate-500 hover:text-rose-400 hover:bg-slate-700 transition-colors"
+                        title="Remove skill"
+                      >
+                        <Trash2 className="w-3 h-3" />
+                      </button>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
+          </div>
+        </div>
+      )}
+
+      {/* Edit Employee Modal */}
+      {editingEmployee && (
+        <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+          <div className="w-full max-w-md rounded-2xl bg-slate-900 border border-slate-800 shadow-2xl p-6 space-y-4">
+            <div className="flex items-center justify-between border-b border-slate-800 pb-3">
+              <div>
+                <h2 className="text-sm font-bold text-white">Edit Employee Details</h2>
+                <span className="text-[10px] text-indigo-400 font-mono">{editingEmployee.employee_id}</span>
+              </div>
+              <button onClick={() => setEditingEmployee(null)} className="text-slate-400 hover:text-white">
+                <X className="w-4 h-4" />
+              </button>
+            </div>
+            <form onSubmit={handleUpdateEmployee} className="space-y-3 text-xs">
+              <div className="grid grid-cols-2 gap-2">
+                <div>
+                  <label className="text-slate-400 block mb-1">First Name</label>
+                  <input
+                    type="text"
+                    required
+                    value={editForm.first_name}
+                    onChange={e => setEditForm({ ...editForm, first_name: e.target.value })}
+                    className="w-full px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-white focus:outline-none focus:border-indigo-500"
+                  />
+                </div>
+                <div>
+                  <label className="text-slate-400 block mb-1">Last Name</label>
+                  <input
+                    type="text"
+                    required
+                    value={editForm.last_name}
+                    onChange={e => setEditForm({ ...editForm, last_name: e.target.value })}
+                    className="w-full px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-white focus:outline-none focus:border-indigo-500"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label className="text-slate-400 block mb-1">Primary Squad / Team</label>
+                <select
+                  value={editForm.primary_team_id}
+                  onChange={e => setEditForm({ ...editForm, primary_team_id: e.target.value })}
+                  className="w-full px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-white focus:outline-none focus:border-indigo-500"
+                >
+                  {teams.slice(0, 50).map(t => (
+                    <option key={t.team_id} value={t.team_id}>{t.team_id}: {t.team_name}</option>
+                  ))}
+                </select>
+              </div>
+
+              <div>
+                <label className="text-slate-400 block mb-1">IT Job Role</label>
+                <select
+                  value={editForm.it_job_role}
+                  onChange={e => setEditForm({ ...editForm, it_job_role: e.target.value })}
+                  className="w-full px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-white focus:outline-none focus:border-indigo-500"
+                >
+                  {uniqueRoles.map(r => (
+                    <option key={r} value={r}>{r}</option>
+                  ))}
+                </select>
+              </div>
+
+              <div className="grid grid-cols-2 gap-2">
+                <div>
+                  <label className="text-slate-400 block mb-1">Status</label>
+                  <select
+                    value={editForm.employment_status}
+                    onChange={e => setEditForm({ ...editForm, employment_status: e.target.value as any })}
+                    className="w-full px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-white focus:outline-none focus:border-indigo-500"
+                  >
+                    <option value="ACTIVE">ACTIVE</option>
+                    <option value="ON_LEAVE">ON_LEAVE</option>
+                    <option value="TERMINATED">TERMINATED (Inactive)</option>
+                  </select>
+                </div>
+                <div>
+                  <label className="text-slate-400 block mb-1">Contract Type</label>
+                  <select
+                    value={editForm.employment_type}
+                    onChange={e => setEditForm({ ...editForm, employment_type: e.target.value as any })}
+                    className="w-full px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-white focus:outline-none focus:border-indigo-500"
+                  >
+                    <option value="FULL_TIME">FULL_TIME</option>
+                    <option value="PART_TIME">PART_TIME</option>
+                    <option value="CONTRACTOR">CONTRACTOR</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 gap-2">
+                <div>
+                  <label className="text-slate-400 block mb-1">Weekly Max Hours</label>
+                  <input
+                    type="number"
+                    step="0.5"
+                    value={editForm.weekly_max_hours}
+                    onChange={e => setEditForm({ ...editForm, weekly_max_hours: parseFloat(e.target.value) })}
+                    className="w-full px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-white focus:outline-none focus:border-indigo-500 font-mono"
+                  />
+                </div>
+                <div>
+                  <label className="text-slate-400 block mb-1">Overtime Cap</label>
+                  <input
+                    type="number"
+                    step="0.5"
+                    value={editForm.overtime_cap_hours}
+                    onChange={e => setEditForm({ ...editForm, overtime_cap_hours: parseFloat(e.target.value) })}
+                    className="w-full px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-white focus:outline-none focus:border-indigo-500 font-mono"
+                  />
+                </div>
+              </div>
+
+              <div className="pt-3 flex justify-end gap-2 border-t border-slate-800">
+                <button
+                  type="button"
+                  onClick={() => setEditingEmployee(null)}
+                  className="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="submit"
+                  className="px-4 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-semibold"
+                >
+                  Save Changes
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       )}
