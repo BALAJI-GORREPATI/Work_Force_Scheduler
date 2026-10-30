@@ -10,6 +10,7 @@ frontend/dist/
 dist/
 build/
 *.egg-info/
+.netlify/
 
 # Logs & temp
 *.log

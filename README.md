@@ -1,12 +1,25 @@
 # WorkForce Scheduler — Workforce Scheduling, Constraint Validation & Decision Traceability
 
-[![Production Build](https://img.shields.io/badge/Production%20Build-Passing-emerald.svg)](https://github.com)
-[![Benchmark F1](https://img.shields.io/badge/Benchmark%20F1-1.0000-blue.svg)](https://github.com)
-[![Coverage Rate](https://img.shields.io/badge/Coverage%20Rate-98.5%25-teal.svg)](https://github.com)
-[![Seed](https://img.shields.io/badge/Seed-20261022-purple.svg)](https://github.com)
-[![License](https://img.shields.io/badge/License-MIT-slate.svg)](https://github.com)
+[![Deployment Live](https://img.shields.io/badge/Deployment-Live%20on%20Netlify-00C7B7?logo=netlify&logoColor=white)](https://workforce-scheduler-balaji.netlify.app)
+[![Database Supabase](https://img.shields.io/badge/Database-Supabase%20PostgreSQL-3ECF8E?logo=supabase&logoColor=white)](https://kjjrhgfmkbjrexzwhgyt.supabase.co)
+[![GitHub Repository](https://img.shields.io/badge/GitHub-BALAJI--GORREPATI%2FWork__Force__Scheduler-181717?logo=github&logoColor=white)](https://github.com/BALAJI-GORREPATI/Work_Force_Scheduler)
+[![Production Build](https://img.shields.io/badge/Production%20Build-Passing-emerald.svg)](https://github.com/BALAJI-GORREPATI/Work_Force_Scheduler)
+[![Benchmark F1](https://img.shields.io/badge/Benchmark%20F1-1.0000-blue.svg)](https://github.com/BALAJI-GORREPATI/Work_Force_Scheduler)
+[![Coverage Rate](https://img.shields.io/badge/Coverage%20Rate-98.5%25-teal.svg)](https://github.com/BALAJI-GORREPATI/Work_Force_Scheduler)
+[![Deterministic Seed](https://img.shields.io/badge/Seed-20261022-purple.svg)](https://github.com/BALAJI-GORREPATI/Work_Force_Scheduler)
+[![License](https://img.shields.io/badge/License-MIT-slate.svg)](LICENSE)
 
-**Enterprise-grade autonomous workforce management platform** engineered for high-concurrency IT engineering organizations. Built with **React 18, TypeScript, Vite, Tailwind CSS, Python optimization engines, Supabase PostgreSQL with Row Level Security (RLS), and Netlify SPA deployment**.
+**Enterprise-grade autonomous workforce management platform** engineered for high-concurrency IT engineering organizations. Built with **React 18, TypeScript, Vite, Tailwind CSS, Python constraint optimization engines, Supabase PostgreSQL with Row Level Security (RLS), and Netlify Edge SPA deployment**.
+
+---
+
+## 🔗 Live Access & Deployment Links
+
+| Resource | URL | Status |
+| :--- | :--- | :---: |
+| **Live Production Web App** | [https://workforce-scheduler-balaji.netlify.app](https://workforce-scheduler-balaji.netlify.app) | **Live (HTTP 200)** |
+| **GitHub Source Repository** | [https://github.com/BALAJI-GORREPATI/Work_Force_Scheduler](https://github.com/BALAJI-GORREPATI/Work_Force_Scheduler) | **Synchronized (`main`)** |
+| **Supabase Cloud Database** | [https://kjjrhgfmkbjrexzwhgyt.supabase.co](https://kjjrhgfmkbjrexzwhgyt.supabase.co) | **Connected & Active** |
 
 ---
 
@@ -24,21 +37,40 @@ Organizations require dynamic workforce schedules that reconcile:
 
 ---
 
-## 2. Core Entities & Mandatory Scale
+## 2. Key Features & Live Database Capabilities
+
+### 2.1 Interactive Employee Directory & Mutation Engine
+- **Add Employee**: Create new IT engineering personnel with automatic ID generation (`EMP-XXXXXX`), instant validation, and direct persistence to Supabase without duplicate records.
+- **Edit Employee**: Live modal dialog allowing operators to update an employee's first name, last name, primary squad, IT job role, employment status, contract type, and weekly working hours. Changes execute an immediate SQL `UPDATE` against the live database.
+- **Soft Deactivation & Reactivation**: Toggle an employee's status to `TERMINATED` (inactive) or `ACTIVE` with one click. Preserves 100% of historical shift assignments, punches, and schedule logs without data deletion.
+- **Skill Competency Management**: Assign and remove competencies from the 60 curated IT skills taxonomy with granular proficiency ratings (`BEGINNER`, `INTERMEDIATE`, `ADVANCED`, `EXPERT`) and years of experience, synchronized in real time to the `employee_skills` table.
+
+### 2.2 End-to-End Leave Lifecycle & Persistence
+- **Approve / Reject Workflow**: Operations managers can review, approve, or reject leave requests across 5,000+ records.
+- **Permanent Cloud Sync**: Status transitions (`APPROVED` / `REJECTED`) are committed directly to Supabase with approver attribution and decision timestamps, permanently persisting across browser page reloads.
+- **Self-Approval Guard**: Built-in authorization constraint prevents employees from approving their own time-off requests.
+
+### 2.3 High-Concurrency Data Hydration
+- **PostgREST Range Pagination**: Overcomes default 1,000-row query limits by executing parallel range queries (`range(0, 999)`, `range(1000, 1999)`, etc.) to load 2,000+ employees and 5,000+ leave records seamlessly on app hydration.
+- **Optimistic State Management**: Instant UI feedback on mutations backed by reliable cloud database synchronization.
+
+---
+
+## 3. Core Entities & Mandatory Scale
 
 | Entity Name | Required Volume | Key Identifier Convention | Relational Meaning |
 | :--- | :--- | :--- | :--- |
 | **Employee** | **2,000 distinct** | `EMP-000001` to `EMP-002000` | IT professionals eligible for scheduling |
 | **Team** | **100 squads** | `TEAM-001` to `TEAM-100` | Engineering squads (Platform, Backend, SRE, etc.) |
 | **Skill** | **60 curated** | `SKILL-001` to `SKILL-060` | Curated IT-only competencies across 7 categories |
-| **EmployeeSkill** | **12,000+ mappings** | `ESK-0000001` | Multi-proficiency bridge (Beginner &rarr; Expert) |
+| **EmployeeSkill** | **24,000+ mappings**| `ESK-0000001` | Multi-proficiency bridge (Beginner &rarr; Expert) |
 | **ShiftTemplate** | **3 shifts (24h)** | `TMPL-01` to `TMPL-03` | 8-hour operational patterns (includes overnight) |
 | **ShiftOccurrence**| **90 days** | `SHIFT-YYYY-MM-DD-<code>-<team>`| Concrete dated shift instances across Q1 2026 |
 | **CoverageRequirement**| **4,500+ demands** | `REQ-0000001` | Mandatory headcount & critical IT skill slots |
-| **ShiftAssignment**| **4,200+ allocations**| `ASG-0000001` | Constraint-satisfied employee-to-shift pairings |
+| **ShiftAssignment**| **5,400+ allocations**| `ASG-0000001` | Constraint-satisfied employee-to-shift pairings |
 | **LeaveRequest** | **5,000 distinct** | `LVE-2026-000001` to `LVE-2026-005000`| Time-off lifecycle records (Approved, Rejected) |
 | **HolidayCalendar**| **Q1 Holidays** | `HOL-2026-01` | Corporate & statutory observed holidays |
-| **AttendanceEvent**| **8,400+ punches** | `ATT-<emp>-<timestamp>-<type>` | Reconciled clock-in/out timestamps & worked hours |
+| **AttendanceEvent**| **10,800+ punches** | `ATT-<emp>-<timestamp>-<type>` | Reconciled clock-in/out timestamps & worked hours |
 | **SwapRequest** | **Full lifecycle** | `SWP-2026-000001` | Peer-to-peer trades with manager authorization |
 | **ValidationIssue**| **Audited findings** | `ISS-0000001` | Structured violations detected by engine |
 | **AnomalyGroundTruth**| **5 Scenarios** | `ANOM-0001` to `ANOM-0005` | Decoupled benchmark ground-truth labels |
@@ -47,7 +79,7 @@ Organizations require dynamic workforce schedules that reconcile:
 
 ---
 
-## 3. Labelled Anomaly Scenarios & Benchmark Performance
+## 4. Labelled Anomaly Scenarios & Benchmark Performance
 
 To rigorously audit the constraint validation engine, five explicit anomalies were injected into an isolated benchmark partition:
 
@@ -73,7 +105,7 @@ $$\text{F1-Score} = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{
 
 ---
 
-## 4. System Architecture & Tech Stack
+## 5. System Architecture & Tech Stack
 
 ```
 WorkForce_Scheduler/
@@ -82,8 +114,8 @@ WorkForce_Scheduler/
 │   └── src/
 │       ├── components/           # Navbar, Sidebar, Layout
 │       ├── context/              # AuthContext & RBAC Persona Switcher
-│       ├── lib/                  # Supabase Client SDK
-│       ├── pages/                # 11 Operational Modules + Landing Page
+│       ├── lib/                  # Supabase Client SDK & Configuration
+│       ├── pages/                # Operational Modules (Dashboard, Schedule, Employees, Leave, Swaps, Attendance)
 │       ├── services/             # Client-side DataService & Optimizer
 │       └── types/                # Comprehensive TypeScript Interfaces
 ├── backend/app/                  # Autonomous Python Computational Engine
@@ -119,13 +151,13 @@ WorkForce_Scheduler/
 
 ---
 
-## 5. Quickstart & Local Development
+## 6. Quickstart & Local Development
 
-### 5.1 Prerequisites
+### 6.1 Prerequisites
 - Python 3.10+
 - Node.js v20+ and npm
 
-### 5.2 Python Engine Setup & Data Generation
+### 6.2 Python Engine Setup & Data Generation
 ```bash
 # 1. Install dependencies
 pip install -r requirements.txt
@@ -140,38 +172,54 @@ python scripts/reproducibility_test.py
 pytest tests/ -v
 ```
 
-### 5.3 Frontend Single-Page Application Setup
+### 6.3 Frontend Single-Page Application Setup
 ```bash
 # 1. Navigate to frontend
 cd frontend
 
-# 2. Install dependencies
+# 2. Configure environment
+# Ensure .env contains:
+# VITE_SUPABASE_URL=https://kjjrhgfmkbjrexzwhgyt.supabase.co
+# VITE_SUPABASE_ANON_KEY=<your-supabase-key>
+
+# 3. Install dependencies
 npm install
 
-# 3. Launch Vite development server
+# 4. Launch Vite development server
 npm run dev
 # Open http://localhost:5173
 ```
 
 ---
 
-## 6. Supabase Configuration (Authentication & PostgreSQL)
+## 7. Supabase Database Configuration
 
-1. Create a new project in [Supabase](https://supabase.com).
-2. Open the SQL Editor in the Supabase Dashboard.
-3. Run `supabase/migrations/001_initial_schema.sql` to instantiate all 10 core entities and audit tables.
-4. Run `supabase/migrations/002_rls_policies.sql` to configure Row Level Security (RLS) policies.
-5. Seed initial records via `supabase/seed.sql` or bulk import via `scripts/generate_and_seed.py`.
-6. Add `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` to `frontend/.env`.
+1. Create or connect your project in [Supabase](https://supabase.com).
+2. Run database migrations located in `supabase/migrations/`:
+   - `001_initial_schema.sql` (Creates all tables: `employees`, `teams`, `skills`, `employee_skills`, `shift_templates`, `shift_occurrences`, `shift_assignments`, `coverage_requirements`, `leave_requests`, `attendance_events`, `swap_requests`, `validation_issues`, `anomaly_ground_truth`, `schedule_runs`, `audit_events`).
+   - `002_rls_policies.sql` (Configures Row Level Security policies).
+3. Populate database records using the automated generator:
+   ```bash
+   python scripts/generate_and_seed.py --mode full
+   ```
+4. Set credentials in `frontend/.env`:
+   ```env
+   VITE_SUPABASE_URL=https://<your-project-ref>.supabase.co
+   VITE_SUPABASE_ANON_KEY=<your-anon-or-service-role-key>
+   ```
 
 ---
 
-## 7. Netlify Deployment
+## 8. Netlify Edge Deployment
 
-1. Connect the GitHub repository to [Netlify](https://app.netlify.com).
-2. Set Build Command: `npm run build`.
-3. Set Publish Directory: `dist`.
-4. Set Base Directory: `frontend`.
-5. Environment variables: `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY`.
-6. Verification: `netlify.toml` automatically handles SPA nested routing (`/* /index.html 200`).
-
+The frontend is deployed to Netlify with single-page application fallback routing:
+1. Automated build command: `npm run build` inside `frontend/`.
+2. Output directory: `frontend/dist/`.
+3. SPA URL redirection defined in `netlify.toml` and `frontend/public/_redirects`:
+   ```toml
+   [[redirects]]
+     from = "/*"
+     to = "/index.html"
+     status = 200
+   ```
+4. Live deployment URL: **[https://workforce-scheduler-balaji.netlify.app](https://workforce-scheduler-balaji.netlify.app)**
